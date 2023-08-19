@@ -1,8 +1,11 @@
 import Image from 'next/image'
 import styles from './page.module.css'
+import Navbar from './components/navbar/navbar'
 
 export default function Home() {
   return (
+    <>
+    <Navbar/>
     <main className={styles.main}>
         <Image
           style={{width:'40%', height: 'auto' }}
@@ -14,5 +17,6 @@ export default function Home() {
           priority
         />
     </main>
+    </>
   )
 }
