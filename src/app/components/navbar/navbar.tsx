@@ -1,11 +1,17 @@
 "use client";
 import Image from 'next/image'
 import styles from './navbar.module.css'
-import { useMemo, useState } from 'react'
+import { useEffect, useMemo, useState } from 'react'
 
 export default function Navbar() {
 
 const [menu, setMenu] = useState(false)
+useEffect(() => {
+    if (menu) {
+      window.scrollTo(0, 0);
+    }
+  }, [menu]);
+  
   return (
     <nav className={styles.nav}>
         {/* /modal */}
@@ -21,8 +27,11 @@ const [menu, setMenu] = useState(false)
         </div>
         }
         <div className={styles.navContainer}>
-            <a href="/">
-                LOGO
+            <a href="/" title='inicio'>
+                <Image className={styles.mainLogoNavbar} src="/navbarlogo.svg" 
+                    width={250}
+                    height={80}
+                    alt="Montezano Figueiredo - GESTÃO TRIBUTÁRIA & PLANEJAMENTO ESTRATÉGICO"/>
             </a>
             <div className={styles.navbarLinks}>
                 <ul className={styles.menuNavbar}>
@@ -30,7 +39,6 @@ const [menu, setMenu] = useState(false)
                     <li><a href=""><p>ATUAÇÃO</p></a></li>
                     <li><a href=""><p>NOTÍCIAS</p></a></li>
                     <li><a href=""><p>CONTATO</p></a></li>
-                    <li><a href=""><p>GRUPO MF</p></a></li>
                 </ul>
                 <ul className={styles.socialMidia}>
                     <li>F</li>

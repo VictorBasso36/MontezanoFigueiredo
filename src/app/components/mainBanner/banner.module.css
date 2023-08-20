@@ -1,0 +1,43 @@
+.banner{
+    width: 100%;
+    height: 100vh;
+    max-height: 800px;  
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    position: relative;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+
+.BackgroundFilter{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 101%;
+    height: 101%;
+    z-index: 1;
+    filter: grayscale(31%) sepia(28%) blur(1px) brightness(22%) saturate(166%) contrast(102%);
+    -webkit-filter: grayscale(31%) sepia(28%) blur(1px) brightness(22%) saturate(166%) contrast(102%);
+    -moz-filter: grayscale(31%) sepia(28%) blur(1px) brightness(22%) saturate(166%) contrast(102%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--mainColor);
+    background-position: center;
+   
+}
+.banner h1{
+    color: white;
+    font-size: 70px;
+}
+
+@media screen and (max-width: 1024px){
+    .banner{
+        width: 100%;
+        height: unset;
+        min-height: 800px;
+    }
+}

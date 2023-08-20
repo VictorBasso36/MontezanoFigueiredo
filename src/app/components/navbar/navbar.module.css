@@ -4,16 +4,21 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    margin-top: 30px;
     top: 0;
     z-index: 15;
 }
 .navContainer{
-    width: 90%;
+    width: 95%;
     display: flex;
     align-items: center;
     justify-content: space-between;
     height: 80px;
-    background-color: red;
+}
+
+.mainLogoNavbar{
+    width: 250px;
+    height: auto;
 }
 .navbarLinks{
     display: flex;
@@ -39,14 +44,19 @@
     align-items: center;
     justify-content: center;
     height: 80px;
-    width: 20px;
 
+    width: 20px;
+}
+
+.menuNavbar li a p{
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
 }
 
 .modal{
     width: 100vw;
     height: 100vh;
-    background-color: rgb(204, 38, 38);
     position: absolute;
     top: 0;
     left: 0;

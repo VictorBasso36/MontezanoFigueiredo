@@ -1,8 +1,11 @@
 import './globals.css'
 import type { Metadata } from 'next'
-import { Inter } from 'next/font/google'
+import { Josefin_Sans } from 'next/font/google'
 
-const inter = Inter({ subsets: ['latin'] })
+const josefin_Sans = Josefin_Sans({ 
+  subsets: ['latin'],
+  weight: ['100','200','300','400','500','600','700'],
+})
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -15,8 +18,8 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
-      <body className={inter.className}>{children}</body>
+    <html lang="pt-BR">
+      <body className={josefin_Sans.className}>{children}</body>
     </html>
   )
 }
