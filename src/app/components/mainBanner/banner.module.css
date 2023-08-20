@@ -168,7 +168,7 @@
     
     .banner h1 span{
         color: var(--suportColor);
-        font-size: 32px;
+        font-size: 5vw;
     }  
 
     .ContentP{
@@ -179,13 +179,54 @@
         font-size: 5vw;
         text-align: center;
     }
-
     .buttonArea{
+        width: 70vw;
+        max-width: 350px;
+        margin-top: 45px;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 80%;
+        justify-content: space-between;
+    }
+
+}
+
+@media screen and (min-width: 0px) and (max-width: 350px){
+    .banner{
+        width: 100%;
+        height: unset;
+        min-height: 600px;
+    }
+    .banner h1{
+        color: white;
+        white-space: break-spaces;
+        font-size: 8vw;
+        font-weight: normal;
+    }
+    
+    .banner h1 strong{
+        font-weight: bold;
+    }
+
+    .banner h1 span{
+        color: var(--suportColor);
+        font-size: 5vw;
+    }  
+    .ContentP{
+        width: 90%;
+        color: white;
+        max-width: 520px;
+        margin-top: 20px;
+        font-size: 5vw;
+        text-align: center;
+    }
+    .buttonArea{
+        width: 85vw;
+        max-width: 350px;
+        margin-top: 45px;
+        display: flex;
+        justify-content: space-between;
     }
 }
+
+
 
 

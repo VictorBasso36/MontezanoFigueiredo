@@ -36,10 +36,11 @@
     list-style: none;
     height: 100%;
     display: flex;
+    margin-left: 20px;
 }
 
 .socialMidia li{
-    margin-left: 10px;
+    margin-left: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -57,23 +58,53 @@
 .modal{
     width: 100vw;
     height: 100vh;
+    z-index: 3;
     position: absolute;
+    background-color: var(--mainColor);
     top: 0;
     left: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: -1;
+
 }
 .hambMenu{
     display: none;
-    width: 45px;
-    height: 45px;
+    width: 50px;
+    height: 35px;
+    cursor: pointer;
     align-items: center;
     justify-content: center;
-    background-color: green;
     position: relative;
-    margin-left: 20px;
+    margin-left: 10px;
+}
+.hambMenuContainer{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+.hambMenuContainer div{
+    background-color: white;
+    border-radius: 30px;
+    width: 100%;
+    transition: all 500ms ease-in-out;
+    height: 5px;
+}
+
+.hambMenuContainer div:nth-child(2){
+    width: 60%;
+}
+
+.hambMenuContainer:hover div{
+    background-color: var(--suportColor);
+    transition: all 500ms ease-in-out;
+}
+
+.hambMenuContainer:hover div:nth-child(2){
+    width: 100%;
 }
 
 @media screen and (min-width:0px) and (max-width: 1024px) {
@@ -83,4 +114,30 @@
     .hambMenu{
         display: flex;
     } 
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 450px){
+    
+    .mainLogoNavbar{
+        width: 60vw;
+        height: auto;
+    }
+
+
+    .navContainer{
+        width: 95%;
+        display: flex;
+        align-items:center;
+        justify-content: space-between;
+    }
+    .socialMidia{
+        display: none;
+    }
+    .navbarLinks{
+        display: flex;
+        justify-content: center;
+        flex-direction: column-reverse;
+        align-items: flex-end;
+    }
 }

@@ -13,7 +13,7 @@ useEffect(() => {
   }, [menu]);
   
   return (
-    <nav className={styles.nav}>
+    <>
         {/* /modal */}
         { menu &&
         <div className={styles.modal}>
@@ -26,6 +26,7 @@ useEffect(() => {
             </div>
         </div>
         }
+    <nav className={styles.nav}>
         <div className={styles.navContainer}>
             <a href="/" title='inicio'>
                 <Image className={styles.mainLogoNavbar} src="/navbarlogo.svg" 
@@ -41,15 +42,20 @@ useEffect(() => {
                     <li><a href=""><p>CONTATO</p></a></li>
                 </ul>
                 <ul className={styles.socialMidia}>
-                    <li>F</li>
-                    <li>I</li>
-                    <li>L</li>
+                    <li><a href=""><Image src='/fbicon.svg' width={25} height={25} alt={''}></Image></a></li>
+                    <li><a href=""><Image src='/instagramicon.svg' width={25} height={25} alt={''}></Image></a></li>
+                    <li><a href=""><Image src='/linkedinicon.svg' width={25} height={25} alt={''}></Image></a></li>
                 </ul>
                 <div className={styles.hambMenu} onClick={() => setMenu(!menu)}>
-                    a
+                    <div className={styles.hambMenuContainer}>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                    </div>
                 </div>
             </div>
         </div>
     </nav>
-  )
+    </>
+    )
 }
