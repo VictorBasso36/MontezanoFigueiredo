@@ -36,15 +36,15 @@ useEffect(() => {
             </a>
             <div className={styles.navbarLinks}>
                 <ul className={styles.menuNavbar}>
-                    <li><a href=""><p>GRUPO MF</p></a></li>
-                    <li><a href=""><p>ATUAÇÃO</p></a></li>
-                    <li><a href=""><p>NOTÍCIAS</p></a></li>
-                    <li><a href=""><p>CONTATO</p></a></li>
+                    <li><a href="/"><p>GRUPO MF</p></a></li>
+                    <li><a href="/"><p>ATUAÇÃO</p></a></li>
+                    <li><a href="/"><p>NOTÍCIAS</p></a></li>
+                    <li><a href="/"><p>CONTATO</p></a></li>
                 </ul>
                 <ul className={styles.socialMidia}>
-                    <li><a href=""><Image src='/fbicon.svg' width={25} height={25} alt={''}></Image></a></li>
-                    <li><a href=""><Image src='/instagramicon.svg' width={25} height={25} alt={''}></Image></a></li>
-                    <li><a href=""><Image src='/linkedinicon.svg' width={25} height={25} alt={''}></Image></a></li>
+                    <li><a href="/" title='Facebook Montezano Figueiredo'><Image src='/fbicon.svg' width={25} height={25} alt={''}></Image></a></li>
+                    <li><a href="/" title='Instagram Montezano Figueiredo'><Image src='/instagramicon.svg' width={25} height={25} alt={''}></Image></a></li>
+                    <li><a href="/" title='Linkedin Montezano Figueiredo'><Image src='/linkedinicon.svg' width={25} height={25} alt={''}></Image></a></li>
                 </ul>
                 <div className={styles.hambMenu} onClick={() => setMenu(!menu)}>
                     <div className={styles.hambMenuContainer}>

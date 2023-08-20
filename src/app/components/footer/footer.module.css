@@ -69,4 +69,10 @@
 
 .footerCopy p{
     margin-top: 25px;
+    font-weight: regular;
+}
+
+.footerCopy p strong{
+    font-weight: bold;
+    color: var(--suportColor);
 }
