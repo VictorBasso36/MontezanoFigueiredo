@@ -11,6 +11,30 @@
     justify-content: center;
 }
 
+.Content{
+   align-items: center;
+   flex-direction: column;
+   justify-content: center;
+   display: flex;
+   z-index: 2;
+}
+
+.ContentP{
+    color: white;
+    max-width: 520px;
+    margin-top: 20px;
+    font-size: 22px;
+    text-align: center;
+}
+
+.buttonArea{
+    width: 90%;
+    max-width: 350px;
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+
 .BackgroundFilter{
     position: absolute;
     top: 0;
@@ -32,12 +56,136 @@
 .banner h1{
     color: white;
     font-size: 70px;
+    font-weight: normal;
 }
 
-@media screen and (max-width: 1024px){
+.banner h1 strong{
+    font-weight: bold;
+}
+
+.banner h1 span{
+    color: var(--suportColor);
+    font-size: 32px;
+}
+
+
+@media screen and (max-width: 1500px){
+    .banner h1{
+        color: white;
+        font-size: 70px;
+        font-weight: normal;
+    }
+    
+    .banner h1 strong{
+        font-weight: bold;
+    }
+    
+    .banner h1 span{
+        color: var(--suportColor);
+        font-size: 32px;
+    }   
+}
+
+
+
+@media screen and (min-width: 1024px) and (max-width:1500px){
+    .banner h1{
+        color: white;
+        font-size: 5vw;
+        font-weight: normal;
+    }
+    
+    .banner h1 strong{
+        font-weight: bold;
+    }
+    
+    .banner h1 span{
+        color: var(--suportColor);
+        font-size: 3vw;
+    }   
+}
+
+@media screen and (min-width: 850px) and (max-width: 1024px){
     .banner{
         width: 100%;
         height: unset;
-        min-height: 800px;
+        min-height: 600px;
+    }
+    .banner h1{
+        color: white;
+        font-size: 5vw;
+        font-weight: normal;
+    }
+    
+    .banner h1 strong{
+        font-weight: bold;
+    }
+    
+    .banner h1 span{
+        color: var(--suportColor);
+        font-size: 32px;
+    }  
+}
+
+@media screen and (min-width: 550px) and (max-width: 850px){
+    .banner{
+        width: 100%;
+        height: unset;
+        min-height: 600px;
+    }
+    .banner h1{
+        color: white;
+        font-size: 5vw;
+        font-weight: normal;
+    }
+    
+    .banner h1 strong{
+        font-weight: bold;
+    }
+    
+    .banner h1 span{
+        color: var(--suportColor);
+        font-size: 32px;
+    }  
+}
+
+@media screen and (min-width: 0px) and (max-width: 550px){
+    .banner{
+        width: 100%;
+        height: unset;
+        min-height: 600px;
+    }
+    .banner h1{
+        color: white;
+        white-space: break-spaces;
+        font-size: 7vw;
+        font-weight: normal;
+    }
+    
+    .banner h1 strong{
+        font-weight: bold;
+    }
+    
+    .banner h1 span{
+        color: var(--suportColor);
+        font-size: 32px;
+    }  
+
+    .ContentP{
+        width: 90%;
+        color: white;
+        max-width: 520px;
+        margin-top: 20px;
+        font-size: 5vw;
+        text-align: center;
+    }
+
+    .buttonArea{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 80%;
     }
 }
+
+

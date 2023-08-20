@@ -1,19 +1,27 @@
 "use client";
 import Image from 'next/image'
 import styles from './banner.module.css'
-import { useEffect, useMemo, useState } from 'react'
+import ButtonMain from '../buttons/buttonMain';
+import ButtonSupport from '../buttons/buttonSuport';
 
-export default function Banner() {
+
+interface BannerProps {
+  title: string;
+  convertText: string;
+}
+export default function Banner({ title, convertText }: BannerProps) {
 
   return (
     <div className={styles.banner} >
         
-        <div style={{zIndex: 2}}>
-            <h1>GESTÃO <strong>TRIBUTÁRIA</strong>  <span>&</span><br /> <strong>PLANEJAMENTO ESTRATÉGICO</strong></h1>
-            <p>A Montezano Figueiredo é um Hub de inteligência que alinha a Gestão Tributária e Planejamento Estratégico. </p>
-            <div>
+        <div className={styles.Content}>
+            <pre style={{ fontFamily: 'inherit', fontSize: 'inherit', lineHeight: 'inherit' }} dangerouslySetInnerHTML={{ __html: title }}></pre>
+            <p className={styles.ContentP}>A Montezano Figueiredo é um Hub de inteligência que alinha a Gestão Tributária e Planejamento Estratégico. </p>
 
-            </div>
+        </div>            
+        <div className={styles.buttonArea} style={{zIndex: 2}}>
+          <ButtonMain buttonLink='/Servicos' buttonText='Serviços' />
+          <ButtonSupport buttonLink='/Quem-Somos' buttonText='Conheça +' />
         </div>
         <div className={styles.BackgroundFilter} style={{backgroundImage: 'url("/bannerinmage.webp")'}}></div>
     </div>

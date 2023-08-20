@@ -1,0 +1,42 @@
+.link{
+    width: 135px;
+    display: flex;
+    height: 45px;
+    cursor: pointer;
+}
+.banner{
+    width: 135px;
+    height: 45px;
+    cursor: pointer;
+    background-color: transparent;
+    outline: none;
+    border: 2px solid white;
+    border-radius: 30px;
+}
+
+.banner p{
+    font-weight: normal;
+    color: white;
+    font-size: 20px;
+}
+
+
+
+@media screen and (min-width: 0px) and (max-width: 500px){
+    .banner{
+        width: 115px;
+        height: 45px;
+        cursor: pointer;
+        background-color: transparent;
+        outline: none;
+        border: 2px solid white;
+        border-radius: 30px;
+    }
+
+    .banner p{
+        font-weight: 700;
+        color: white;
+        font-size: 15px;
+    }
+    
+}

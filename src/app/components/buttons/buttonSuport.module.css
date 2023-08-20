@@ -1,0 +1,35 @@
+.link{
+    width: 135px;
+    display: flex;
+    height: 45px;
+    cursor: pointer;
+}
+.banner{
+    width: 135px;
+    cursor: pointer;
+    height: 45px;
+    background-color: transparent;
+    outline: none;
+    background-color: var(--suportColor);
+    border: 2px solid var(--suportColor);
+    border-radius: 30px;
+}
+
+.banner p{
+    font-weight: normal;
+    color: white;
+    font-size: 20px;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 500px){
+    .banner{
+        width: 115px;
+    }
+    .banner p{
+        font-weight: 700;
+        color: white;
+        font-size: 15px;
+    }
+
+}

@@ -9,7 +9,7 @@ export default function Home() {
     <>
     <Navbar/>
     <main className={styles.main}>
-      <Banner/>
+      <Banner convertText='A Montezano Figueiredo é um Hub de inteligência que alinha a Gestão Tributária e Planejamento Estratégico. ' title='<h1>GESTÃO <strong>TRIBUTÁRIA</strong><span> &</span><br /> PLANEJAMENTO <strong>ESTRATÉGICO</strong></h1>'/>
     </main>
     <Footer/>
     </>
