@@ -28,3 +28,23 @@ a {
   text-decoration: none;
 }
 
+/* Estilos para a barra de rolagem */
+::-webkit-scrollbar {
+  width: 4px; /* Largura da barra de rolagem */
+}
+
+
+/* Estilo do puxador (thumb) */
+::-webkit-scrollbar-thumb {
+  background-color: var(--suportColor); /* Cor da variável --suportColor */
+  border-radius: 0px 0px 6px 6px; /* Borda arredondada para o puxador */
+}
+
+::-webkit-scrollbar-thumb:hover{
+  background-color: #6b5636;
+}
+
+/* Estilo do fundo da barra de rolagem */
+::-webkit-scrollbar-track {
+  background-color: white; /* Fundo branco */
+}
