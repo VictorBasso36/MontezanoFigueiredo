@@ -16,7 +16,7 @@ export default function Banner({ title, convertText }: BannerProps) {
         
         <div className={styles.Content}>
             <pre style={{ fontFamily: 'inherit', fontSize: 'inherit', lineHeight: 'inherit' }} dangerouslySetInnerHTML={{ __html: title }}></pre>
-            <p className={styles.ContentP}>A Montezano Figueiredo é um Hub de inteligência que alinha a Gestão Tributária e Planejamento Estratégico. </p>
+            <p className={styles.ContentP}> { convertText }</p>
 
         </div>            
         <div className={styles.buttonArea} style={{zIndex: 2}}>

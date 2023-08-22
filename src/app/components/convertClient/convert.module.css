@@ -1,0 +1,70 @@
+.Convert{
+    min-height: 500px;
+    position: relative;
+    text-align: center;
+    display: flex;
+    align-items: center;justify-content: center;
+    width: 100%;
+}
+.ConvertContainer{
+    width: 90%;
+    display: flex;
+    z-index: 2;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.filter{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 101%;
+    height: 101%;
+    z-index: 1;
+    filter: grayscale(31%) sepia(28%) blur(2px) brightness(22%) saturate(166%) contrast(102%);
+    -webkit-filter: grayscale(31%) sepia(28%) blur(2px) brightness(22%) saturate(166%) contrast(102%);
+    -moz-filter: grayscale(31%) sepia(28%) blur(1px) brightness(22%) saturate(166%) contrast(102%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--mainColor);
+    background-position: center;
+}
+
+
+.TitleContainer{
+    text-align: center;
+    flex-direction: column;
+    display: flex;
+}
+
+.TitleContainer p{
+    font-size: 32px;
+    color: var(--suportColor);
+}
+.TitleContainer h5{
+    color: white;
+    font-weight: normal;
+    font-size: 65px;
+}
+
+.TitleContainer h5 strong{
+    font-weight: bold;
+}
+
+.buttonArea{
+    flex-direction: column;
+    display: flex;
+}
+
+.buttonArea button{
+    background-color: var(--suportColor);
+    padding: 10px;
+    border-radius: 25px;
+    border:none;
+    outline: none;
+    color: white;
+}

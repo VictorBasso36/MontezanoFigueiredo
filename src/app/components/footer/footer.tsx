@@ -51,7 +51,7 @@ export default function Footer() {
         <div className={styles.footerCopy}>
             <h6>© 2023 MONTEZANO FIGUEIREDO. Todos os Direitos Reservados.</h6>
 
-            <a href=""><p><strong>• Privacidade</strong> e <strong>Termos</strong> de Uso.</p></a>
+            <a href=""><p>•<strong> Privacidade</strong> e <strong>Termos</strong> de Uso.</p></a>
         </div>
       </div>
     </footer>

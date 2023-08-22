@@ -29,7 +29,7 @@
     list-style: none;
 }
 .menuNavbar li{
-    margin-left: 20px;
+    margin-left: 40px;
 }
 
 .socialMidia{
@@ -45,16 +45,23 @@
     align-items: center;
     justify-content: center;
     height: 80px;
-
+    transition: all 500ms;
     width: 20px;
+}
+.socialMidia li:hover{
+    opacity: 0.7;
 }
 
 .menuNavbar li a p{
+    transition: all 500ms;
     color: white;
     font-size: 16px;
     font-weight: bold;
 }
 
+.menuNavbar li a p:hover{
+    color: var(--suportColor)!important;
+}
 .modal{
     width: 100vw;
     height: 100vh;
