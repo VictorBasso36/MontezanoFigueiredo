@@ -12,8 +12,10 @@ export default function AtuacaoAreas() {
     query Atuacoes {
       atuacaos {
         data {
+          id
           attributes {
             TituloCard
+            DescricaoCard
           }
         }
       }
@@ -37,8 +39,8 @@ export default function AtuacaoAreas() {
         </div>
         <div className={styles.CardHere}>
             <CardAtuacao />
-            {data.atuacaos.data.map((atuacao: any, index: React.Key | null | undefined) => (
-                <CardServico key={index} />
+            {data?.atuacaos?.data?.map((atuacao: any, index: React.Key | null | undefined) => (
+                <CardServico title={atuacao?.attributes?.TituloCard} description={atuacao?.attributes?.DescricaoCard} id={'/Areas-de-Atuacao/Servico/' + atuacao?.id} key={index} />
             ))}
             <CardAtuacao />
         </div>
