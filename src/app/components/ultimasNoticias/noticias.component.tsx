@@ -47,7 +47,7 @@ if (error) return null;
             </div>
             <div className={styles.CardList}>
                 {data?.blogs?.data?.map((blogs: any, index: React.Key | null | undefined) => ( 
-                <CardBlog backgroundImage={blogs?.attributes?.FotoCard?.data?.attributes?.url} id={blogs?.id} tagImage={''} tagText={blogs?.attributes?.TopicoCard} title={blogs?.attributes?.TituloCard} description={blogs?.attributes?.DescricaoCard} />
+                <CardBlog key={index} backgroundImage={blogs?.attributes?.FotoCard?.data?.attributes?.url} id={blogs?.id} tagImage={''} tagText={blogs?.attributes?.TopicoCard} title={blogs?.attributes?.TituloCard} description={blogs?.attributes?.DescricaoCard} />
                 ))}
 
             </div>
