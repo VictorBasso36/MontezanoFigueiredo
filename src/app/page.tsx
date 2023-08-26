@@ -5,6 +5,10 @@ import Banner from './components/mainBanner/banner'
 import Convert from './components/convertClient/convert'
 import Footer from './components/footer/footer'
 import NoticiasLast from './components/ultimasNoticias/noticias.component'
+import AtuacaoAreas from './components/atuacao'
+import Confiaca from './components/confiancaResultados'
+import BannerDestaque from './components/bannerDestaque'
+import Numeros from './components/numeros'
 
 export default function Home() {
   return (
@@ -13,6 +17,10 @@ export default function Home() {
     <main className={styles.main}>
       <Banner />
     </main>
+    <Confiaca/>
+    <BannerDestaque />
+    <AtuacaoAreas/>
+    <Numeros/>
     <NoticiasLast/>
     <Convert/>
     <Footer/>

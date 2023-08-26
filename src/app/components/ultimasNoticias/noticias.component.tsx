@@ -8,28 +8,28 @@ import CardBlog from '../cards/cardBlog';
 import { gql, useQuery } from '@apollo/client';
 export default function NoticiasLast() {
 
-const query = gql`
-query Blogs {
-    blogs {
-      data {
-        attributes {
-          BlogPost
-          DescricaoCard
-          EscritoPor
-          FotoCard {
-            data {
-              attributes {
-                url
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-  `
-const { loading, error, data } = useQuery(query); 
-console.log(data)
+// const query = gql`
+// query Blogs {
+//     blogs {
+//       data {
+//         attributes {
+//           BlogPost
+//           DescricaoCard
+//           EscritoPor
+//           FotoCard {
+//             data {
+//               attributes {
+//                 url
+//               }
+//             }
+//           }
+//         }
+//       }
+//     }
+//   }
+//   `
+// const { loading, error, data } = useQuery(query); 
+// console.log(data)
 
 
   return (
@@ -37,9 +37,9 @@ console.log(data)
         <div className={styles.containerNoticias}>
             <div className={styles.Title}>
                 <h3>Sempre <span>atualizados</span>  <br /><strong>
-                ÚLTIMAS <span>NOTÍCIAS</span></strong></h3>
+                ÚLTIMOS <span>CONTEÚDOS</span></strong></h3>
 
-                <Link href={"/Noticias"}>
+                <Link href={"/Conteudo"}>
                     <button className={styles.ButtonConvert}>Acompanhe todas as notícias  +</button>
                 </Link>   
                 
