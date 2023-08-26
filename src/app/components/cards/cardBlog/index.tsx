@@ -11,6 +11,7 @@ interface CardBlogProps {
   tagText: string;
   title: string;
   description: string;
+  id: string;
 }
 
 export default function CardBlog({
@@ -19,20 +20,21 @@ export default function CardBlog({
   tagText,
   title,
   description,
+  id,
 }: CardBlogProps) {
   return (
     <article className={styles.cardMain}>
-      <div className={styles.MainImage} style={{backgroundImage:"url(/simbolo-box-areia.png)"}} />
+      <div className={styles.MainImage} style={{backgroundImage:`url(https://montezano.bassodev.com.br${backgroundImage})`}} />
       <div className={styles.textArea}>
         <div className={styles.tagArea}>
           <Image src="simbolo-marrom.svg" width={25} height={25}  alt="Imagem do card"/>
-          <p>Direito Tributário</p>
+          <p>{tagText}</p>
         </div>
         <div className={styles.titleArea}>
-          <h4>Lorem ipsum dolor sit amet consectetur adipiscing elit</h4>
+          <h4>{title}</h4>
         </div>
-        <p className={styles.Description}>Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica.</p>
-        <ButtonSupport buttonText='Saiba +'buttonLink='/post' />
+        <p className={styles.Description}>{description}</p>
+        <ButtonSupport buttonText='Saiba +' buttonLink={`/Conteudo/Post/${id}`} />
       </div>
       
     </article>

@@ -8,30 +8,31 @@ import CardBlog from '../cards/cardBlog';
 import { gql, useQuery } from '@apollo/client';
 export default function NoticiasLast() {
 
-// const query = gql`
-// query Blogs {
-//     blogs {
-//       data {
-//         attributes {
-//           BlogPost
-//           DescricaoCard
-//           EscritoPor
-//           FotoCard {
-//             data {
-//               attributes {
-//                 url
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-//   `
-// const { loading, error, data } = useQuery(query); 
-// console.log(data)
-
-
+const query = gql`
+    query Blogs {
+    blogs {
+        data {
+        id
+        attributes {
+            TituloCard
+            FotoCard {
+            data {
+                attributes {
+                url
+                }
+            }
+            }
+            DescricaoCard
+            EscritoPor
+            TopicoCard
+        }
+        }
+    }
+    }
+  `
+const { loading, error, data } = useQuery(query); 
+if (loading) return <p>Cargando...</p>;
+if (error) return null;
   return (
     <section className={styles.MainWidth}>
         <div className={styles.containerNoticias}>
@@ -45,9 +46,9 @@ export default function NoticiasLast() {
                 
             </div>
             <div className={styles.CardList}>
-                <CardBlog backgroundImage={''} tagImage={''} tagText={''} title={''} description={''} />
-                <CardBlog backgroundImage={''} tagImage={''} tagText={''} title={''} description={''} />
-                <CardBlog backgroundImage={''} tagImage={''} tagText={''} title={''} description={''} />
+                {data?.blogs?.data?.map((blogs: any, index: React.Key | null | undefined) => ( 
+                <CardBlog backgroundImage={blogs?.attributes?.FotoCard?.data?.attributes?.url} id={blogs?.id} tagImage={''} tagText={blogs?.attributes?.TopicoCard} title={blogs?.attributes?.TituloCard} description={blogs?.attributes?.DescricaoCard} />
+                ))}
 
             </div>
         </div>
