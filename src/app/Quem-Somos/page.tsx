@@ -14,7 +14,6 @@ export default function QuemSomos() {
     <main className={styles.main}>
       <Banner />
     </main>
-    <CardServico />
     <CardAtuacao />
     <Convert/>
     <Footer/>
