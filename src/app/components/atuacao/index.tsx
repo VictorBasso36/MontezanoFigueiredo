@@ -1,3 +1,4 @@
+"use client";
 import Image from 'next/image';
 import styles from './index.module.css';
 import React from 'react';
@@ -22,7 +23,7 @@ export default function AtuacaoAreas() {
   const { loading, error, data } = useQuery(GET_ATUACOES);
 
   if (loading) return <p>Cargando...</p>;
-  if (error) return <p>Error: {error.message}</p>;
+  if (error) return null;
 
   console.log(data);
   return (
@@ -36,13 +37,9 @@ export default function AtuacaoAreas() {
         </div>
         <div className={styles.CardHere}>
             <CardAtuacao />
-            <CardServico />
-            <CardServico />
-            <CardServico />
-            <CardServico />
-            <CardServico />
-            <CardServico />
-            <CardServico />
+            {data.atuacaos.data.map((atuacao: any, index: React.Key | null | undefined) => (
+                <CardServico key={index} />
+            ))}
             <CardAtuacao />
         </div>
     </section>
