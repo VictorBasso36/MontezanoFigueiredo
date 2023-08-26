@@ -6,14 +6,20 @@ import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation'
 
 export default function Navbar() {
-const pathname = usePathname()
-console.log(pathname)
-const [menu, setMenu] = useState(false)
- 
-useEffect(() => {
-        if (menu) {
+    const pathname = usePathname();
+    const [menu, setMenu] = useState(false);
+  
+    useEffect(() => {
+      if (menu) {
+       
         window.scrollTo(0, 0);
-        }
+        document.body.style.overflow = 'hidden'
+        document.body.style.overflowX = 'none'
+      } else {
+       
+        document.body.style.overflow = 'auto'
+        document.body.style.overflowX = 'hidden'
+      }
     }, [menu]);
     
   return (
@@ -24,8 +30,18 @@ useEffect(() => {
             <div className={styles.modalContainer}>
                 <div className={styles.headerContainer}>
                 </div>
-                <div>
-                    linksHere
+                <div className={styles.modalLinks}>
+                    <ul>
+                        <li><Link href="/Quem-Somos"> <p style={{ borderBottom: 'white solid 1px', color: 'var(--suportColor)'}}>GRUPO MF</p></Link></li>
+                        <li><Link href="/Areas-de-Atuacao"><p style={{ marginBottom: 'var(--suportColor)', color: pathname.includes('Areas-de-Atuacao') ? 'var(--suportColor)' : 'white' }}>ATUAÇÃO</p></Link></li>
+                        <li><Link href="/Conteudo"><p style={{ marginBottom: 'var(--suportColor)', color: pathname.includes('Conteudo') ? 'var(--suportColor)' : 'white' }}>CONTEÚDO</p></Link></li>
+                        <li><Link href="/Contato"><p style={{ marginBottom: 'var(--suportColor)', color: pathname.includes('Contato') ? 'var(--suportColor)' : 'white' }}>CONTATO</p></Link></li>
+                    </ul>
+                    <ul className={styles.ModalsocialMidia}>
+                        <li><a href="/" title='Facebook Montezano Figueiredo'><Image src='/fbicon.svg' width={25} height={25} alt={''}></Image></a></li>
+                        <li><a href="/" title='Instagram Montezano Figueiredo'><Image src='/instagramicon.svg' width={25} height={25} alt={''}></Image></a></li>
+                        <li><a href="/" title='Linkedin Montezano Figueiredo'><Image src='/linkedinicon.svg' width={25} height={25} alt={''}></Image></a></li>
+                    </ul>
                 </div>
             </div>
         </div>
@@ -42,7 +58,7 @@ useEffect(() => {
                 <ul className={styles.menuNavbar}>
                     <li><Link href="/Quem-Somos"> <p style={{ borderBottom: 'white solid 1px', color: 'var(--suportColor)'}}>GRUPO MF</p></Link></li>
                     <li><Link href="/Areas-de-Atuacao"><p style={{ marginBottom: 'var(--suportColor)', color: pathname.includes('Areas-de-Atuacao') ? 'var(--suportColor)' : 'white' }}>ATUAÇÃO</p></Link></li>
-                    <li><Link href="/Noticias"><p style={{ marginBottom: 'var(--suportColor)', color: pathname.includes('Noticias') ? 'var(--suportColor)' : 'white' }}>NOTÍCIAS</p></Link></li>
+                    <li><Link href="/Conteudo"><p style={{ marginBottom: 'var(--suportColor)', color: pathname.includes('Conteudo') ? 'var(--suportColor)' : 'white' }}>CONTEÚDO</p></Link></li>
                     <li><Link href="/Contato"><p style={{ marginBottom: 'var(--suportColor)', color: pathname.includes('Contato') ? 'var(--suportColor)' : 'white' }}>CONTATO</p></Link></li>
                     
                 </ul>

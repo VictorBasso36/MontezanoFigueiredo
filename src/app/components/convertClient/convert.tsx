@@ -15,7 +15,7 @@ export default function Convert() {
                 <p>impulsione o seu negócio</p><br />
                 <h5>INOVAÇÃO EMPRESÁRIAL E <strong>TRIBUTÁRIA</strong></h5> 
             </div>
-            <div>
+            <div className={styles.ConvertDescription}>
                 <p>A trajetória do empresário é longa e cheia de obstáculos, mas não precisa ser instável, nosso objetivo é mostrar o melhor caminho. <a href=""><strong>Vem conosco ?</strong></a></p>
             </div>
             <div className={styles.buttonArea}>
@@ -24,7 +24,7 @@ export default function Convert() {
                         <p>Contato Imediato </p> 
                     </button>
                 </a>
-                <a href="">Tenho Uma Dúvida</a>
+                <a href=""><p className={styles.TenhoUmDuvida}>Tenho Uma Dúvida</p></a>
             </div>
 
             

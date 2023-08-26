@@ -1,8 +1,9 @@
 :root {
-  --max-width: 1100px;
+  --max-width: 1200px;
   --border-radius: 12px;
   --mainColor: #1C1711;
   --suportColor: #C09759;
+  --titleSize: 55px;
 }
 
 * {
@@ -16,6 +17,7 @@ body {
   max-width: 100vw;
   background-color: white;
   padding: 0;
+  color: var(--mainColor);
   border: none;
   overflow-x: hidden;
 }

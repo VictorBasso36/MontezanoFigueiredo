@@ -1,0 +1,102 @@
+.MainWidth{
+    width: 100%;display:flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.containerNoticias{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    max-width: var(--max-width);
+}
+
+.CardList{
+    justify-content: space-evenly;
+    margin-bottom: 60px;
+    margin-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.Title{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 50px;
+}
+
+
+.Title h3{
+    font-size: 36px;
+    font-weight: normal;
+}
+
+.Title h3 span{
+    color: var(--suportColor);
+}
+
+.Title h3 strong{
+    font-size: var(--titleSize);
+    font-weight: normal;
+}
+
+.Title h3 strong span{
+    font-weight: bold;
+    color: var(--mainColor);
+}
+
+.ButtonConvert{
+    background-color: var(--suportColor);
+    border: none;
+    padding: 10px 25px;
+    height: 45px;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: all 500ms ease-in-out;
+    cursor: pointer;
+}
+
+.ButtonConvert:hover{
+    background-color: var(--mainColor);
+    transition: all 500ms ease-in-out;
+}
+
+@media screen and (min-width: 280px) and (max-width:550px){
+    .Title{
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-items: flex-start;
+        transform: scale(0.9);
+        margin-top: 50px;
+    }
+    
+    
+    .Title h3{
+        font-size: 26px;
+        font-weight: normal;
+    }
+    
+    .Title h3 span{
+        color: var(--suportColor);
+    }
+    
+    .Title h3 strong{
+        font-size: var(--titleSize);
+        font-weight: normal;
+        font-size: 26px;
+    }
+    
+    .Title h3 strong span{
+        font-weight: bold;
+        color: var(--mainColor);
+    }
+    
+}

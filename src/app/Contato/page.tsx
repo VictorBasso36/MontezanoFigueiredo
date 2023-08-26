@@ -10,7 +10,7 @@ export default function Contato() {
     <>
     <Navbar/>
     <main className={styles.main}>
-      <Banner convertText='Estratégia com consciência, responsabilidade e <strong> agilidade. </strong>' title='<h1>CONTATO<strong> PESSOAL</strong></h1>'/>
+      <Banner  convertText='Estratégia com consciência, responsabilidade e <strong> agilidade. </strong>' title='<h1>CONTATO<strong> PESSOAL</strong></h1>'/>
     </main>
     <Convert/>
     <Footer/>

@@ -1,0 +1,27 @@
+.mainCard{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 350px;
+    min-height: 350px;
+}
+
+
+.HeaderCard{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: auto;
+}
+.DescriptionCard{
+    margin-top: 20px;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+@media screen and (max-width: 400px){
+    .mainCard{
+        transform: scale(0.8);
+    }
+}

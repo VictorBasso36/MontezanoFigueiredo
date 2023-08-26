@@ -48,7 +48,7 @@
 .TitleContainer h5{
     color: white;
     font-weight: normal;
-    font-size: 65px;
+    font-size: var(--titleSize);
 }
 
 .TitleContainer h5 strong{
@@ -58,13 +58,73 @@
 .buttonArea{
     flex-direction: column;
     display: flex;
+    color: white;
 }
 
 .buttonArea button{
+    width: 220px;
     background-color: var(--suportColor);
     padding: 10px;
     border-radius: 25px;
     border:none;
     outline: none;
+    font-size: 15px;
+    font-weight: bold;
     color: white;
+    transition: all 500ms ease-in-out;
+}
+
+.buttonArea button:hover{
+    transition: all 500ms ease-in-out;
+    background-color: var(--mainColor);
+}
+
+.buttonArea button pre{
+    font-size: 18px;
+}
+
+.TenhoUmDuvida{
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.TenhoUmDuvida:hover{
+    color: var(--suportColor);
+}
+
+.ConvertDescription{
+    color: white;
+    font-size: 18px;
+    margin-top: 20px;
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.ConvertDescription strong{
+    color: var(--suportColor);
+}
+
+
+@media screen and (min-width:0px) and (max-width: 500px){
+    .TitleContainer h5{
+        color: white;
+        font-size: 30px!important;
+        font-weight: normal;
+        font-size: var(--titleSize);
+    }
+    
+    .TitleContainer h5 strong{
+        font-weight: bold;
+        font-size: 30px;
+    }
+
+    .TitleContainer p{
+        line-height: 10%;
+        font-size: 16px;
+        color: var(--suportColor);
+    }
+
+    .ConvertDescription strong{
+        font-size: 20px;
+    }
 }

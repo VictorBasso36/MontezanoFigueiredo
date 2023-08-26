@@ -66,6 +66,7 @@
     width: 100vw;
     height: 100vh;
     z-index: 3;
+    overflow: hidden;
     position: absolute;
     background-color: var(--mainColor);
     top: 0;
@@ -112,6 +113,43 @@
 
 .hambMenuContainer:hover div:nth-child(2){
     width: 100%;
+}
+
+
+.modalContainer{
+    margin-top: 300px;
+    width: 90%;
+    height: 100%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.modalLinks{
+    width: 100%;
+    flex-direction: column;
+    display: flex;
+    height: 100%;
+    overflow-y: scroll;
+    align-items: center;
+    justify-content: flex-start;
+    overflow-y: hidden;
+
+}
+
+.modalLinks ul{
+    list-style: none;
+}
+
+.modalLinks ul li{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 20px;
+}
+.ModalsocialMidia{
+    display: flex;
+    background-color: red;
+    height: 80px!important;
 }
 
 @media screen and (min-width:0px) and (max-width: 1024px) {
