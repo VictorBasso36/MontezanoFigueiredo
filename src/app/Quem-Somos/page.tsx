@@ -6,6 +6,7 @@ import Convert from '../components/convertClient/convert'
 import Footer from '../components/footer/footer'
 import CardServico from '../components/cards/cardServico'
 import CardAtuacao from '../components/cards/cardAtuacao/caardAtuacao'
+import AtuacaoAreas from '../components/atuacao'
 
 export default function QuemSomos() {
   return (
@@ -14,7 +15,7 @@ export default function QuemSomos() {
     <main className={styles.main}>
       <Banner />
     </main>
-    <CardAtuacao />
+    <AtuacaoAreas />
     <Convert/>
     <Footer/>
     </>
