@@ -13,12 +13,10 @@ export default function Navbar() {
       if (menu) {
        
         window.scrollTo(0, 0);
-        document.body.style.overflow = 'hidden'
-        document.body.style.overflowX = 'none'
+        document.body.style.overflowY = 'hidden';
       } else {
        
-        document.body.style.overflow = 'auto'
-        document.body.style.overflowX = 'hidden'
+        document.body.style.overflowY = 'unset';
       }
     }, [menu]);
     

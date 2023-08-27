@@ -14,7 +14,7 @@ export default function Contato() {
       <Banner/>
     </main>
     <Localize/>
-    <Convert/>
+    <Convert/>    
     <Footer/>
     </>
   )

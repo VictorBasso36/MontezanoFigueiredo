@@ -62,10 +62,12 @@
 
 @media screen and (max-width: 300px) {
     .cardMain {
-        transform: scale(0.8); /* Ajuste o valor conforme necessário */
+        padding: 0px;
+        transform: scale(0.9); /* Ajuste o valor conforme necessário */
     }
 
     .cardList{
         width: 100%;
+        
     }
 }

@@ -41,7 +41,7 @@ if (error) return null;
                 ÚLTIMOS <span>CONTEÚDOS</span></strong></h3>
 
                 <Link href={"/Conteudo"}>
-                    <button className={styles.ButtonConvert}>Acompanhe todas as notícias  +</button>
+                    <button className={styles.ButtonConvert}>+ Conteúdos</button>
                 </Link>   
                 
             </div>

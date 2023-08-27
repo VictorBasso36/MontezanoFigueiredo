@@ -11,9 +11,45 @@
     max-width: var(--max-width);
     display: flex;
 }
+.HeaderBack{
+    margin: 30px 0px;
+    width: 90%;
+    max-width: var(--max-width);
+}
 
+.HeaderBack button{
+    background-color: var(--suportColor);
+    border: none;
+    align-items: center;
+    color: white;
+    font-size: 22px;
+    font-weight: normal;
+    border-radius: 30px;
+    height: 45px;
+    justify-content: center;
+    width: 120px;
+    cursor: pointer;
+    display: flex;
+    transition: all 500ms ease-in-out;
+}
+
+.HeaderBack button:hover{
+    background-color: var(--mainColor);
+}
 .HeaderBack p{
     margin-bottom: 0px!important;
+}
+
+.PostTitle p{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.PostTitle p strong{
+    color: var(--suportColor);
+}
+.PostTitle p span{
+    color: var(--suportColor);
 }
 
 .PostHere{
@@ -24,12 +60,45 @@
 
 .PostHere img{
     width: 100%;
+    margin-top: 10px;
     border-radius: 12px 30px 12px 12px;
+}
+
+.PostHere blockquote{
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    border-left: 4px solid var(--suportColor);
 }
 
 .PostHere p{
     font-size: 22px;
     margin-bottom: 20px;
+}
+
+.PostHere blockquote p{
+    margin-bottom: 0px!important;
+}
+
+.PostHere a{
+    color: var(--suportColor);
+}
+
+.PostHere strong{
+    color: var(--suportColor);
+}
+
+.PostHere span{
+    color: var(--suportColor);
+}
+
+.PostHere ol{
+    margin-bottom: 20px;
+    font-weight: 22px;
+}
+
+.PostHere ul{
+    margin-bottom: 20px;
+    font-weight: 22px;
 }
 
 
@@ -38,11 +107,93 @@
     overflow: hidden;
     max-width: var(--max-width);
     display: flex;
-    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.ConvertArea{
+    width: 280px;
+    margin-left: 20px;
+}
+
+.CreditArea{
+    padding: 10px 20px;
+    color: var(--mainColor);
+    width: 100%;
+    border-left: 2px solid var(--suportColor);
+}
+
+.GhostWhiter{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+.GhostWhiter span{
+    color: var(--suportColor);
+}
+
+.NameAreaa{
+    font-size: 22px;
+    text-align: left;
+    transition: all 500ms ease-in-out;
+    font-weight: bold;
+}
+
+.NameAreaa:hover{
+    color: var(--suportColor);
+}
+
+.Location{
+    font-size: 22px;
+}
+
+.Location span{
+    color: var(--suportColor);
 }
 
 
+.ButtonModalConvert{
+    margin-left: 20px;
+    background-color: var(--suportColor);
+    border-radius: 30px;
+    padding: 10px 20px;
+    height: 45px;
+    outline: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-weight: normal;
+    font-size: 22px;
+    transition: all 500ms ease-in-out;
+}
 
-@media  screen and (max-width: 1024px) {
+.ButtonModalConvert:hover{
+    background-color: var(--mainColor);
+}
+
+.SepatedContent{
+    width: 100%;
+    min-height: 85px;
+    margin: 40px 0px;
+    background-color: var(--mainColor);
+}
+
+@media screen and (max-width: 1024px){
+    .mainContainer{
+        width: 90%;
+        overflow: hidden;
+        max-width: var(--max-width);
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+    }
     
+.ConvertArea{
+    width: 280px;
+    margin-left: 00px;
 }
+
+}
+

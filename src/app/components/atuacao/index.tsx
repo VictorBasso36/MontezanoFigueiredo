@@ -33,7 +33,7 @@ export default function AtuacaoAreas() {
         <div className={styles.ContainerArea}>
             <div className={styles.MainTitleHere}>
                 <p>Área de Atuação </p>
-                <h2>LOREM IPSUM DOLLER</h2>
+                <h2>LOREM IPSUM <strong>DOLLER</strong></h2>
                 <p>Lorem ipsum é simplesmente uma simulação.</p>
             </div>
         </div>

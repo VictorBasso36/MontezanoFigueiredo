@@ -27,6 +27,9 @@
     font-size: 22px;
     text-align: center;
 }
+.ContentP span{
+    color: var(--suportColor);
+}
 
 .buttonArea{
     width: 90%;
@@ -67,6 +70,55 @@
 .banner h1 span{
     color: var(--suportColor);
     font-size: 32px;
+}
+
+.preTitle{
+    color: white;
+    margin-bottom: 10px;
+    max-width: 100%;
+    text-align: center;
+    font-size: 22px;
+
+}
+
+.preTitle strong{
+    color: var(--suportColor);
+}
+
+.buttonAreaWhatsapp{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    display: flex;
+
+}
+.whatsappbanner{
+    width: 160px;
+    border: none;
+    outline: none;
+    display: flex;
+    height: 45px;
+    border-radius: 30px;
+    align-items: center;
+    color:white;
+    font-size: 22px;
+    font-weight: normal;
+    cursor: pointer;
+    padding: 10px 20px;
+    justify-content: space-evenly;
+    background-color: var(--suportColor);
+    transition: all 500ms;
+
+}
+
+.whatsappbanner:hover{
+    background-color: var(--mainColor);
+}
+
+
+.whatsappbanner p{
+    margin-right: 10px;
 }
 
 
@@ -126,6 +178,11 @@
         color: var(--suportColor);
         font-size: 32px;
     }  
+
+    .AtuacaoTipe{
+        font-size: 40px!important;
+        width: 90%;
+    }
 }
 
 @media screen and (min-width: 550px) and (max-width: 850px){
@@ -148,6 +205,12 @@
         color: var(--suportColor);
         font-size: 32px;
     }  
+
+    .AtuacaoTipe{
+        font-size: 30px!important;
+        transform: scale(1.1);
+        width: 90%;
+    }
 }
 
 @media screen and (min-width: 0px) and (max-width: 550px){
@@ -180,12 +243,19 @@
         font-size: 5vw;
         text-align: center;
     }
+    
     .buttonArea{
-        width: 70vw;
-        max-width: 350px;
+        width: 90%;
+        max-width: 300px;
         margin-top: 45px;
         display: flex;
         justify-content: space-between;
+    }
+    .AtuacaoTipe{
+        font-size: 25px!important;
+        margin-top: 10px;
+        transform: scale(1.1);
+        width: 90%;
     }
 
 }
@@ -219,9 +289,12 @@
         font-size: 5vw;
         text-align: center;
     }
+    .ContentP span{
+        color: var(--suportColor);
+    }
     .buttonArea{
-        width: 85vw;
-        max-width: 350px;
+        align-items: center;
+        width: 90%;
         margin-top: 45px;
         display: flex;
         justify-content: space-between;

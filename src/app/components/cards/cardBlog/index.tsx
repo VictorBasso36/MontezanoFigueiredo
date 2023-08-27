@@ -27,7 +27,7 @@ export default function CardBlog({
       <div className={styles.MainImage} style={{backgroundImage:`url(https://montezano.bassodev.com.br${backgroundImage})`}} />
       <div className={styles.textArea}>
         <div className={styles.tagArea}>
-          <Image src="simbolo-marrom.svg" width={25} height={25}  alt="Imagem do card"/>
+          <Image src="/simbolo-marrom.svg" width={25} height={25}  alt="Imagem do card"/>
           <p>{tagText}</p>
         </div>
         <div className={styles.titleArea}>

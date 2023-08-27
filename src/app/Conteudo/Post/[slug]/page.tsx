@@ -54,7 +54,7 @@ export default function ContentPostagem({ params }: { params: { slug: string } }
     <>
       <Navbar/>
       <Banner/>
-      <ContentPost BlogPost={data?.blog?.data?.attributes?.BlogPost} dataPost='' TituloPreConteudo=''/>
+      <ContentPost BlogPost={data?.blog?.data?.attributes?.BlogPost} dataPost='' TituloPreConteudo={data?.blog?.data?.attributes?.TituloPreConteudo}/>
       <NoticiasLast/>
       <Convert/>
       <Footer/>
