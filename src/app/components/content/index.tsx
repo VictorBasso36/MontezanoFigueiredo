@@ -2,7 +2,6 @@ import Image from 'next/image';
 import styles from './index.module.css';
 import React, { useEffect, useState } from 'react';
 import { ReactMarkdown } from 'react-markdown/lib/react-markdown';
-import ButtonSupport from '../buttons/buttonSuport';
 import Link from 'next/link';
 
 interface propsContentPost{
@@ -11,7 +10,7 @@ interface propsContentPost{
     BlogPost: string;
 }
 
-export default function ({dataPost, TituloPreConteudo, BlogPost}: propsContentPost) {
+export default function ContentPost ({ BlogPost }: propsContentPost) {
   const [modifiedBlogPost, setModifiedBlogPost] = useState(BlogPost);
 
   useEffect(() => {
@@ -38,7 +37,7 @@ export default function ({dataPost, TituloPreConteudo, BlogPost}: propsContentPo
                 </Link>
               </div>
               <ReactMarkdown>
-                {modifiedBlogPost}
+                {modifiedBlogPost ? modifiedBlogPost : ''}
               </ReactMarkdown>
             </div>            
             <div className={styles.ConvertArea}>
