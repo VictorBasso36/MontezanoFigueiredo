@@ -9,6 +9,7 @@ import AtuacaoAreas from './components/atuacao'
 import Confiaca from './components/confiancaResultados'
 import BannerDestaque from './components/bannerDestaque'
 import Numeros from './components/numeros'
+import CreditBanner from './components/creditBannner'
 
 export default function Home() {
   return (

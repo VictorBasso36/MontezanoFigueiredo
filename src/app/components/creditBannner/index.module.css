@@ -1,0 +1,69 @@
+.CreditBanner{
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+
+.Container{
+    width: 90%;
+    max-width: var(--max-width);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.PhotoHere{
+    width: 280px;
+    z-index: 2;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 280px;
+    border-radius: 12px;
+    background-color: var(--suportColor);
+}
+
+.ContentHere{
+    display: flex;
+    height: 250px;
+    border-radius: 12px;
+    margin-left: -20px;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 25px 20px 20px 40px;
+    color: white;
+    width: 100%;
+    max-width: 700px;
+    background-color: var(--mainColor);
+}
+
+.ContentHere h2{
+    color: white;
+    font-size: 28px;
+}
+
+
+.ContentHere p{
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+.ContentHere button{
+    padding: 10px 20px;
+    color: white;
+    height: 45px;
+    border: none;
+    outline: none;
+    font-size: 22px;
+    margin-top: 15px;
+    background-color: var(--suportColor);
+    border-radius: 30px;
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 1024px){
+
+}

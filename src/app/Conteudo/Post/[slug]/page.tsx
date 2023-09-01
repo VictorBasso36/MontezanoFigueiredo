@@ -9,6 +9,7 @@ import NoticiasLast from '@/app/components/ultimasNoticias/noticias.component'
 import Banner from '@/app/components/mainBanner/banner'
 import { gql, useQuery } from '@apollo/client';
 import ContentPost from '@/app/components/content';
+import CreditBanner from '@/app/components/creditBannner';
 
 export default function ContentPostagem({ params }: { params: { slug: string } }) {
   const GET_POST = gql`
@@ -55,6 +56,8 @@ export default function ContentPostagem({ params }: { params: { slug: string } }
       <Navbar/>
       <Banner/>
       <ContentPost BlogPost={data?.blog?.data?.attributes?.BlogPost} dataPost='' TituloPreConteudo={data?.blog?.data?.attributes?.TituloPreConteudo}/>
+      <CreditBanner description='' title='' url=''/>
+      <br/>
       <NoticiasLast/>
       <Convert/>
       <Footer/>

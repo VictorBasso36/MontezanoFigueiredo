@@ -1,0 +1,42 @@
+.main{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.main h2{
+    font-size: var(--titleSize);
+    font-weight: normal;
+    margin-top: 5px;
+}
+
+.ptitle{
+    font-size: 22px;
+    margin-top: 30px;
+}
+
+.ptitle strong{
+    font-weight: bold;
+    color: var(--suportColor);
+}
+
+.ptitle span{
+    color: var(--suportColor);
+}
+
+.ptitle2{
+    font-size: 22px;
+    width: 90%;
+}
+
+.ContentHere{
+    display: flex;
+    width: 90%;
+}
+
+.ContentHere{
+    margin-top: 40px;
+}

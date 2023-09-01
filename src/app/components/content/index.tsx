@@ -70,9 +70,6 @@ export default function ContentPost ({ BlogPost, TituloPreConteudo }: propsConte
               </button>
             </div>
         </div>  
-        <div className={styles.SepatedContent}>
-
-        </div>
     </section>
   );
 }

@@ -4,15 +4,55 @@
     background-color: gray;
     padding: 20px;
     flex-direction: column;
+    overflow: hidden;
     width: 100%;
     max-width: 320px;
     border-radius: 12px;
     min-height: 320px;
+    position: relative;
     align-items: flex-start;
     justify-content: space-evenly;
 }
 
+.Container{
+    z-index: 1;
+}
+
+.Container button{
+    background-color: var(--suportColor);
+    padding: 10px 20px;
+    border-radius: 30px;
+    border: none;
+    margin-top: 10px;
+    transition: all 500ms ease-in-out;
+    color: white;
+    font-weight: normal;
+    font-size: 18px;
+}
+
+.Container button:hover{
+    background-color: var(--mainColor);
+}
+
 .DescriptionCard h2{
+    
     color:white;
     font-size: 26px;
+}
+.Filter{
+    width: 100%;
+    left: 0;
+    filter: grayscale(31%) sepia(28%) blur(1px) brightness(22%) saturate(166%) contrast(102%);
+    -webkit-filter: grayscale(31%) sepia(28%) blur(1px) brightness(22%) saturate(166%) contrast(102%);
+    -moz-filter: grayscale(31%) sepia(28%) blur(1px) brightness(22%) saturate(166%) contrast(102%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--mainColor);
+    background-position: center;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    height: 100%;
+
 }

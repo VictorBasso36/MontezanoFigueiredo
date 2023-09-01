@@ -1,0 +1,55 @@
+.mainSection{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ResutadoContainer{
+    width: 90%;
+    margin: 120px 0px;
+    display: flex;
+    max-width: var(--max-width);
+}
+
+.ContainerResultados{
+    width: 50%;
+}
+
+.ContainerResultados h2{
+    font-size: var(--titleSize);
+}
+
+.ContainerResultados p{
+    font-size: 22px;
+}
+
+.ResultadoDescription{
+    margin-top: 20px;
+    font-size: 22px;
+}
+
+.ResultadoDescription span{
+    color: var(--suportColor);
+}
+
+.ContainerResultados button{
+    background-color: var(--suportColor);
+    border: none; border-radius: 30px;
+    height: 45px; padding: 10px 20px;
+    color: white; font-weight: normal;
+    margin-top: 10px; cursor: pointer;
+    transition: all 500ms ease-in-out;
+}
+
+.ContainerResultados button:hover{
+    background-color: var(--mainColor);
+}
+.Swiper{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

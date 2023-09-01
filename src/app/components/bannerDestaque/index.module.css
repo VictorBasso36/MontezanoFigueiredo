@@ -1,0 +1,80 @@
+.MainSection{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;  
+    margin: 50px 0px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--mainColor);
+    background-position: center;
+    position: relative;
+}
+
+.Filter{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;
+    filter: grayscale(31%) sepia(28%) blur(1px) brightness(22%) saturate(166%) contrast(102%);
+    -webkit-filter: grayscale(31%) sepia(28%) blur(1px) brightness(22%) saturate(166%) contrast(102%);
+    -moz-filter: grayscale(31%) sepia(28%) blur(1px) brightness(22%) saturate(166%) contrast(102%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--mainColor);
+    background-position: center;
+    height: 100%;
+    z-index: 0;
+}
+
+.MainCotainer{
+    height: 350px;
+    z-index: 1;
+    width: 90%;
+    display: flex;
+    max-width: var(--max-width);
+    align-items: center;
+    justify-content: center;
+}
+
+.CardService{
+    width: 100%;
+    padding: 10px 25px;
+    max-width: 500px;
+}
+
+.CardService p{
+    color: white;
+    font-size: 22px;
+    margin-top: 20px;
+}
+
+.CardService p span{
+    color: var(--suportColor);
+    font-weight: bold;
+}
+
+.CardCenter{
+    background-color: var(--suportColor);
+    height: 120%;
+    display: flex;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    padding: 25px;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    width: 100%;
+    max-width: 550px;
+}
+
+.CardService h2{
+    color: white;
+    font-size: 36px;
+}
+
+.CardCenter p{
+    width: 90%;
+    font-size: 40px;
+}
