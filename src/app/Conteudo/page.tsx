@@ -13,16 +13,6 @@ export default function Noticias() {
     <main className={styles.main}>
       <Banner />
     </main>
-    <div className={styles.LastConteudo}>
-      <div className={styles.LastConteudoContainer}>
-        <div>
-          last post
-        </div>
-        <div>
-          image last post
-        </div>
-      </div>
-    </div>
     <NoticiasLast/>
     <Convert/>
     <Footer/>

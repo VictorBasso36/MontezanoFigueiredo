@@ -12,7 +12,7 @@ import { usePathname } from 'next/navigation';
 export default function NoticiasLast() {
 const pathname = usePathname();
  const [currentPage, setCurrentPage] = useState(1);
-  const pageSize = pathname !== ("/") ? 4 : 3; // Number of items per page
+  const pageSize = pathname === "/" ? 3 : 6; 
   
   // Atualizar a URL quando a página muda
   useEffect(() => {
@@ -71,87 +71,25 @@ const pathname = usePathname();
 
   return (
     <section className={styles.MainWidth}>
-      <div className={styles.containerNoticias}>
-
-
-
-          { pathname !== ("/") ?
-          <>
-            <div className={styles.lastPostDestaque}>
-              {data?.blogs?.data?.length > 0 && (
-                <div className={styles.NoticiasFirsPost}>
-                  <div>
-                    <div>
-                      <p>Direito Tributário</p>
-                      <h2>data?.blogs?.data[0]?.attributes?.TituloCard</h2>
-                      <p>data?.blogs?.data[0]?.attributes?.DescricaoCard</p>
-                      <Link href={`/Conteudo/Post/${data?.blogs?.data[0]?.id}`}>
-                        <button>
-
-                        </button>
-                      </Link>
-                    </div>
-                    <div style={{backgroundImage:`url(https://montezano.bassodev.com.br${data?.blogs?.data[0]?.attributes?.FotoCard?.data?.attributes?.url})`}}>
-
-                    </div>
-                  </div>
-                  {/* <CardBlog
-                    backgroundImage={data?.blogs?.data[0]?.attributes?.FotoCard?.data?.attributes?.url}
-                    id={data?.blogs?.data[0]?.id}
-                    tagImage={''}
-                    tagText={data?.blogs?.data[0]?.attributes?.TopicoCard}
-                    title={data?.blogs?.data[0]?.attributes?.TituloCard}
-                    description={data?.blogs?.data[0]?.attributes?.DescricaoCard}
-                  /> */}
-                </div>
-              )}
-            </div>
+      <div className={styles.containerNoticias}>    
             <div className={styles.Title}>
               <h3>
                 Sempre <span>atualizados</span> <br />
                 <strong>ÚLTIMOS <span>CONTEÚDOS</span></strong>
               </h3>
+              {pathname === "/" ?
               <Link href={'/Conteudo'}>
                 <button className={styles.ButtonConvert}>+ Conteúdos</button>
               </Link>
+              :
+             
+              <button className={styles.ButtonConvert}>+ Contato</button>
+        
+              }
             </div>
             <div className={styles.CardList} style={{ minHeight: data?.blogs?.data?.length > 1 ? 430 : 0 }}>
               {loading ? (
-                <h1>Loading</h1>
-              ) : (
-                <>
-                  {data?.blogs?.data?.slice(1, 4).map((blogs: any, index: React.Key | null | undefined) => (
-                    <CardBlog
-                      key={index}
-                      backgroundImage={blogs?.attributes?.FotoCard?.data?.attributes?.url}
-                      id={blogs?.id}
-                      tagImage={''}
-                      tagText={blogs?.attributes?.TopicoCard}
-                      title={blogs?.attributes?.TituloCard}
-                      description={blogs?.attributes?.DescricaoCard}
-                    />
-                  ))}
-                </>
-              )}
-            </div>
-           </>
-        
-
-
-          :
-          <>          
-            <div className={styles.Title}>
-              <h3>
-                Sempre <span>atualizados</span> <br />
-                <strong>ÚLTIMOS <span>CONTEÚDOS</span></strong>
-              </h3>
-              <Link href={'/Conteudo'}>
-                <button className={styles.ButtonConvert}>+ Conteúdos</button>
-              </Link>
-            </div>
-            <div className={styles.CardList} style={{ minHeight: 430 }}>
-              {loading ? (
-                <h1>Loading</h1>
+                <div className={styles.ldsEllipsis}><div></div><div></div><div></div><div></div></div>
               ) : (
                 <>
                   {data?.blogs?.data?.map((blogs: any, index: React.Key | null | undefined) => (
@@ -167,8 +105,6 @@ const pathname = usePathname();
                 </>
               )}
           </div>
-          </>
-          }
         <div className={styles.PaginationHere}>
             <Pagination
             current={currentPage}

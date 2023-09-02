@@ -15,7 +15,7 @@ export default function QuemSomos() {
     <main className={styles.main}>
       <Banner />
     </main>
-    <AtuacaoAreas />
+    
     <Convert/>
     <Footer/>
     </>
