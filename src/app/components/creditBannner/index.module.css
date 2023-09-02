@@ -56,14 +56,108 @@
     color: white;
     height: 45px;
     border: none;
+    cursor: pointer;
     outline: none;
     font-size: 22px;
+    transition: all 500ms ease-in-out;
     margin-top: 15px;
     background-color: var(--suportColor);
     border-radius: 30px;
 }
 
+.ContentHere button:hover{
+    background-color: var(--mainColor);
+}
 
-@media screen and (min-width: 0px) and (max-width: 1024px){
 
+@media screen and (min-width: 550px) and (max-width: 1024px){
+    .Container{
+        flex-direction: column;
+    }
+
+    .PhotoHere{
+        width: 280px;
+        z-index: 2;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 280px;
+        margin-bottom: -20px;
+        border-radius: 12px;
+        background-color: var(--suportColor);
+    }
+
+
+    .ContentHere h2{
+        text-align: center;
+        margin-top: 30px;
+        color: white;
+        font-size: 28px;
+    }
+
+    .ContentHere{
+        display: flex;
+        height: auto;
+        border-radius: 12px;
+        margin-left: 0px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 25px 20px 20px 25px;
+        color: white;
+        width: 100%;
+        max-width: 700px;
+        background-color: var(--mainColor);
+    }
+    .ContentHere p{
+        text-align: center;
+        font-size: 18px;
+        margin-top: 10px;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 550px){
+    .Container{
+        flex-direction: column;
+    }
+
+    .PhotoHere{
+        width: 280px;
+        z-index: 2;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 280px;
+        margin-bottom: -20px;
+        border-radius: 12px;
+        background-color: var(--suportColor);
+    }
+
+
+    .ContentHere h2{
+        text-align: center;
+        margin-top: 30px;
+        color: white;
+        font-size: 28px;
+    }
+
+    .ContentHere{
+        display: flex;
+        height: auto;
+        border-radius: 12px;
+        margin-left: 0px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px 20px 20px 20px;
+        color: white;
+        width: 100vw;
+        max-width: 700px;
+        background-color: var(--mainColor);
+    }
+    .ContentHere p{
+        text-align: center;
+        font-size: 18px;
+        margin-top: 10px;
+    }
 }

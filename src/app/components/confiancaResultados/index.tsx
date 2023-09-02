@@ -23,11 +23,11 @@ export default function Confiaca() {
           <div className={styles.Swiper}>
               <div className={styles.SwiperHere}>
                   <div className={styles.SwiperCard}>
-
+                    swiper here
                   </div>
               </div>
               <div className={styles.ButtonHere}>
-                  swiper Here
+                  buytton Here
               </div>
           </div>
         </div>  

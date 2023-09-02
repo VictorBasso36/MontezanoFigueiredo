@@ -41,7 +41,6 @@ export default function AtuacaoAreas() {
             {data?.atuacaos?.data?.map((atuacao: any, index: React.Key | null | undefined) => (
                 <CardServico title={atuacao?.attributes?.TituloCard} id={'/Areas-de-Atuacao/Servico/' + atuacao?.id} key={index} />
             ))}
-            <CardAtuacao />
         </div>
     </section>
   );

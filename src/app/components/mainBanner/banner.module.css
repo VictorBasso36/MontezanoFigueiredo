@@ -122,6 +122,25 @@
 }
 
 
+.bannerquemSomos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.ContentQuemSomos{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+
+
+
+
 @media screen and (max-width: 1500px){
     .banner h1{
         color: white;

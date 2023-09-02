@@ -76,5 +76,97 @@
 
 .CardCenter p{
     width: 90%;
-    font-size: 40px;
+    font-size: 36px;
+}
+
+
+@media screen and (min-width: 550px) and (max-width: 1024px){
+    .MainCotainer{
+        height: auto;
+        z-index: 1;
+        width: 90%;
+        flex-direction: column;
+        display: flex;
+        max-width: var(--max-width);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .CardCenter{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        background-color: var(--suportColor);
+        height: 120%;
+        display: flex;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        padding: 25px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        width: 100vw;
+        max-width: unset;
+    }
+    .CardService{
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        align-items: center;
+        padding: 10px 25px;
+        max-width: 500px;
+    }
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 550px){
+    .MainCotainer{
+        height: auto;
+        z-index: 1;
+        width: 90%;
+        flex-direction: column;
+        display: flex;
+        max-width: var(--max-width);
+        align-items: center;
+        justify-content: center;
+    }
+
+    .CardCenter{
+        margin-top: 30px;
+        margin-bottom: 30px;
+        background-color: var(--suportColor);
+        height: 120%;
+        display: flex;
+        color: white;
+        font-weight: bold;
+        text-align: center;
+        padding: 25px;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        width: 100vw;
+        max-width: unset;
+    }
+    .CardService{
+        width: 100%;
+        text-align: center;
+        margin-top: 30px;
+        margin-bottom: 30px;
+        align-items: center;
+        padding: 10px 10px;
+        max-width: 500px;
+    }
+
+    .CardService h2{
+        color: white;
+        text-align: center;
+        font-size: 28px;
+    }
+    
+    .CardCenter p{
+        width: 90%;
+        font-size: 28px;
+    }
+    
 }
