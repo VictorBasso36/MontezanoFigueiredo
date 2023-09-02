@@ -2,6 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Josefin_Sans } from 'next/font/google'
 import GraphQLProvider from './lib/provider'
+import { ConfigProvider } from 'antd'
 const josefin_Sans = Josefin_Sans({ 
   subsets: ['latin'],
   weight: ['100','200','300','400','500','600','700'],
@@ -25,7 +26,16 @@ export default function RootLayout({
   return (
    <html lang="pt-Br">
     <body className={josefin_Sans.className}>
-     <GraphQLProvider>{children}</GraphQLProvider>
+     <GraphQLProvider>
+      <ConfigProvider  theme={{
+      token: {
+        colorBorder: '#C09759', 
+        colorPrimary: '#C09759',
+      },
+    }}>
+        {children}
+        </ConfigProvider>
+      </GraphQLProvider>
     </body>
    </html>
   );
