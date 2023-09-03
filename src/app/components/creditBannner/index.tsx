@@ -16,7 +16,7 @@ export default function CreditBanner( {title, description, url}:PropsOfCredit) {
   return (
     <section className={styles.CreditBanner}>
         <div className={styles.Container}>
-            <div className={styles.PhotoHere} style={{backgroundImage: url}}>
+            <div className={styles.PhotoHere} style={{backgroundImage: `url(https://montezano.bassodev.com.br/uploads/${url})`}}>
 
             </div>
             <div className={styles.ContentHere}>
@@ -27,7 +27,7 @@ export default function CreditBanner( {title, description, url}:PropsOfCredit) {
                     {description}
                 </p>
                 <button>
-                    Tire suas duvidas
+                    Entre em contato !
                 </button>
             </div>
 

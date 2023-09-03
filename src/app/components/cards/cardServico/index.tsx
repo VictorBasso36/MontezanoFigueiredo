@@ -6,11 +6,13 @@ import ButtonSupport from '../../buttons/buttonSuport';
 interface CardServicoProps {
   id: string;
   title: string;
+  description: string;
 }
 
 export default function CardServico({
   id,
   title,
+  description,
 }:CardServicoProps) {
   return (
     <div className={styles.mainCard}>
@@ -19,6 +21,9 @@ export default function CardServico({
 
           <Image src={'/simbolo-marrom.svg'} width={45} height={45} alt={''}></Image>
           <h2>{title}</h2>
+          <div className={styles.DescriptionCard}>
+            <p>{description}.</p>
+          </div>
         </div>
         <div className={styles.ButtonArea}>
           <ButtonSupport buttonLink={id} buttonText='Saiba +'  />

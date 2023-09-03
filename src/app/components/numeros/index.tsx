@@ -14,8 +14,11 @@ export default function Numeros() {
     <section className={styles.MainWidth}>
       <p>Temos <span>orgulho</span> dos</p>
         <h2>NOSSOS <strong>NÚMEROS</strong></h2>
+       <div>
+        
+       </div>
        <div className={styles.NumerosContainer}>
-            <CreditBanner description='Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica. Lorem Ipsum é simplesmente uma simulação de texto da indústria tipográfica.' title='Lorem Ipsum é uma sequencia  tipográfica de textos.' url={`url('https://montezano.bassodev.com.br/uploads/convert_27d47659e0.PNG')`}/>
+            <CreditBanner description='Ultrapassar o comum e acelerar o crescimento do seu negócio é nosso objetivo, adotando um olhar estratégico para tributos e processos. A Montezano te mostra o caminho.' title='Somos um escritório de soluções:' url={`convert_27d47659e0.PNG`}/>
        </div>
     </section>
     )

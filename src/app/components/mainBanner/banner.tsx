@@ -6,8 +6,14 @@ import ButtonSupport from '../buttons/buttonSuport';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { gql, useQuery } from '@apollo/client';
-
-export default function Banner() {
+interface Props {
+  id: string;
+  title: string;
+}
+export default function Banner({
+  id,
+  title,
+}:Props) {
   const pathname = usePathname();
   const query = gql`
   query BannersFoto {
@@ -68,7 +74,7 @@ export default function Banner() {
         {pathname === "/" &&     
         <> 
           <div className={styles.bannerHome} style={{zIndex: 2}}>
-            <div className={styles.Content}>
+            <div className={styles.ContentMainBanner}>
                 <p><strong>-</strong>Excelência em Gestão Tributária e Planejamento Estratégico<strong>-</strong></p>
                 <h1>MONTEZANO <strong>FIGUEIREDO</strong></h1>
             </div>        
@@ -104,7 +110,7 @@ export default function Banner() {
                 <p className={styles.ContentP}>Estratégia com consciência, responsabilidade e <span>agilidade</span>. </p>
             </div>  
             <div className={styles.buttonArea} style={{zIndex: 2}}>
-              <ButtonMain buttonLink='/Areas-de-Atuacao#Servicos' buttonText='Serviços' />
+              <ButtonMain buttonLink='/Areas-de-Atuacao' buttonText='Serviços' />
               <ButtonSupport buttonLink='/Quem-Somos' buttonText='Conheça' />
             </div>
           </div>
@@ -113,7 +119,6 @@ export default function Banner() {
         }
         {pathname.includes("/Areas-de-Atuacao/Servico/") &&   
         <>  
-        1
           <div className={styles.atuacaoBanner} style={{zIndex: 2}}>
             <div className={styles.Content}>
                 <p className={styles.preTitle}><strong>-</strong>Excelência em Gestão Tributária e Planejamento Estratégico<strong>-</strong></p>
@@ -148,7 +153,7 @@ export default function Banner() {
         }
         {pathname === "/Conteudo" &&    
         <>  
-          <div className={styles.BannerContent} style={{zIndex: 2}}>
+          <div className={styles.BannerContent} style={{zIndex: 2, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', width: '90%'}}>
             <div className={styles.Content}>
                 <p className={styles.preTitle}><strong>-</strong>Excelência em Gestão Tributária e Planejamento Estratégico<strong>-</strong></p>
                 <h1>PORTAL DE <strong>CONTEÚDO</strong></h1>

@@ -16,7 +16,7 @@ export default function Home() {
     <>
     <Navbar/>
     <main className={styles.main}>
-      <Banner />
+      <Banner id='' title=''/>
     </main>
     <Confiaca/>
     <BannerDestaque />

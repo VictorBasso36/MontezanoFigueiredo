@@ -1,6 +1,6 @@
 "use client"
 import Image from 'next/image'
-import styles from '../page.module.css'
+import styles from './index.module.css'
 import Navbar from '../components/navbar/navbar'
 import Banner from '../components/mainBanner/banner'
 import Convert from '../components/convertClient/convert'
@@ -12,6 +12,7 @@ import { gql, useQuery } from '@apollo/client';
 import CreditEquipeBanner from '../components/cards/equipeCard'
 import Numeros from '../components/numeros'
 import Confiaca from '../components/confiancaResultados'
+import ButtonSupport from '../components/buttons/buttonSuport'
 
 export default function QuemSomos() {
   const query = gql`
@@ -20,7 +21,7 @@ export default function QuemSomos() {
       data {
         id
         attributes {
-          Cargo
+          Nome
           Descricao
           Foto {
             data {
@@ -40,7 +41,7 @@ export default function QuemSomos() {
   console.log(data);
 
   const equipeBanners = data?.equipes?.data.map((equipe: any, index: any) => (
-    <CreditEquipeBanner key={index} social={equipe?.attributes?.MidiaSocial} description={equipe?.attributes?.Descricao} title={equipe?.attributes?.Cargo} url={equipe?.attributes?.Foto?.data?.attributes?.url} />
+    <CreditEquipeBanner key={index} social={equipe?.attributes?.MidiaSocial} description={equipe?.attributes?.Descricao} title={equipe?.attributes?.Nome} url={equipe?.attributes?.Foto?.data?.attributes?.url} />
   ));
   function shuffleArray(array: any) {
     const shuffledArray = [...array];
@@ -58,15 +59,19 @@ export default function QuemSomos() {
     <>
     <Navbar/>
     <main className={styles.main}>
-      <Banner />
+      <Banner id='' title=''/>
     </main>
-
-    <p></p>
-    <h2>LOREM IPSUM DOLLE ASSIT AMET</h2>
-    <p>A visão diferenciada da Montezano Figueiredo está revolucionando a gestão tributária e o planejamento estratégico brasileiro.Atualmente, o que nos distingue no mercado é a nossa agilidade, sensibilidade e responsabilidade para com os nossos clientes.Isso tudo faz com que nós sejamos uma pérola no mercado, com uma habilidade única em oferecer soluções personalizadas para empresas de todo o Brasil.</p>
-    <br />
-    <br />
-    <br />
+    <div className={styles.MainTtitle}>
+      <div className={styles.MainConteiner}>
+        <p className={styles.titleFirst}><strong>-</strong>Sobre nós<strong>-</strong></p>
+        <h2>A FRENTE DO MERCADO, SOMOS FOCADOS <strong>NA ENTREGA</strong>.</h2>
+        <p className={styles.description}>A visão diferenciada da <span>Montezano Figueiredo</span> está revolucionando a gestão tributária e o planejamento estratégico no Brasil. Com consciência, responsabilidade e agilidade oferecemos soluções personalizadas, focando em trazer a melhor versão do seu negócio. </p>
+        <br />
+        <br />
+        <br />
+        <ButtonSupport buttonLink='gogle.com' buttonText='Contato'/>
+      </div>
+    </div>
     <br />
     <br />
     <br />

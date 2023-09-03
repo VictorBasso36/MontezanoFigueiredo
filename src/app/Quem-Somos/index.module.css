@@ -1,0 +1,117 @@
+.MainTtitle{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.MainConteiner{
+    width: 90%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    max-width: var(--max-width);
+}
+
+.titleFirst{
+    font-size: 26px;
+    margin-top: 80px;
+}
+
+.titleFirst strong{
+    color: var(--suportColor);
+    font-weight: bold;
+}
+
+.MainConteiner h2{
+    font-size: var(--titleSize);
+    text-align: center;
+    font-weight: normal;
+}
+
+.MainConteiner h2 strong{
+    font-weight: bold;
+}
+
+
+.description{
+    font-size: 22px;
+    align-items: center;
+    text-align: center;
+}
+
+.description span{
+    color: var(--suportColor);
+}
+
+/* --max-width: 1200px;
+--border-radius: 12px;
+--mainColor: #1C1711;
+--suportColor: #C09759;
+--titleSize: 55px; */
+
+
+
+
+@media screen and (min-width: 550px) and (max-width: 850px){
+    .MainTtitle{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .MainConteiner{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        max-width: var(--max-width);
+    }
+    .MainConteiner h2{
+        font-size: 32px;
+        text-align: center;
+        font-weight: normal;
+    }
+    
+    .MainConteiner h2 strong{
+        font-weight: bold;
+    }
+}
+
+@media screen and (min-width: 0px) and (max-width: 550px){
+    
+.titleFirst{
+    font-size: 22px;
+    margin-top: 80px;
+}
+    .MainTtitle{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .MainConteiner{
+        width: 90%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        max-width: var(--max-width);
+    }
+    .MainConteiner h2{
+        font-size: 7vw;
+        text-align: center;
+        font-weight: normal;
+    }
+    
+    .MainConteiner h2 strong{
+        font-weight: bold;
+    }
+}

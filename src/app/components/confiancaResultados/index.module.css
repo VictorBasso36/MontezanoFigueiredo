@@ -46,11 +46,62 @@
 .ContainerResultados button:hover{
     background-color: var(--mainColor);
 }
-.Swiper{
+
+.VideoContainer{
+    height: 228px;
+    width: 164px;
+    border-radius: 30px;
+    display: flex;
+    overflow: hidden;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--mainColor);
+}
+
+.swiperMain{
     width: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+
+.Slide{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    
+}
+
+
+.playVideo{
+    transition: all 300ms ease-in-out;
+    z-index: 1;
+}
+.Slide:hover .playVideo{
+
+    transform:scale(1.2);
+}
+
+.filter{
+    width: 100%;
+    left: 0;
+    filter: grayscale(1%) sepia(11%) blur(0px) brightness(42%) saturate(166%) contrast(102%);
+    -webkit-filter: grayscale(1%) sepia(11%) blur(0px) brightness(42%) saturate(166%) contrast(102%);
+    -moz-filter: grayscale(1%) sepia(11%) blur(0px) brightness(42%) saturate(166%) contrast(102%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--mainColor);
+    background-position: center;
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 30px;
+    height: 100%;
 }
 
 
@@ -90,3 +141,42 @@
     
     
 }
+
+@media screen and (min-width:0px) and (max-width: 550px){
+    .ResutadoContainer{
+        width: 90%;
+        margin: 60px 0px;
+        flex-direction: column;
+        display: flex;
+        max-width: var(--max-width);
+    }
+
+    .ContainerResultados h2{
+        text-align: center;
+        font-size: 12vw;
+    }
+    
+    .ContainerResultados p{
+        text-align: center;
+        font-size: 22px;
+    }
+    .ContainerResultados{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+
+    .Swiper{
+        width: 100%;
+        display: flex;
+        margin-top: 40px;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    
+}
+
+

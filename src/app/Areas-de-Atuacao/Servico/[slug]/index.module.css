@@ -1,0 +1,37 @@
+.mainTitle{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.mainTitleContainer{
+    width: 90%;
+    display: flex;
+    max-width: var(--max-width);
+}
+
+.textArea{
+    margin-left: 20px;
+    margin-top: 10px;
+}
+
+.pretitle{
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.pretitle strong{
+    color: var(--suportColor);
+    font-size: 26px;
+
+}
+
+.textArea h1{
+    font-size: var(--titleSize);
+}
+
+.Description{
+    font-size: 26px;
+}
