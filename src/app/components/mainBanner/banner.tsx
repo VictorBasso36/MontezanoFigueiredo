@@ -172,9 +172,7 @@ export default function Banner({
         <>
           <div className={styles.contatoBanner} style={{zIndex: 2}}>
             <div className={styles.Content}>
-              <p className={styles.preTitle}><strong>-</strong>Excelência em Gestão Tributária e Planejamento Estratégico<strong>-</strong></p>
               <h1 className={styles.AtuacaoTipe}>CONTATO <strong>PESSOAL</strong></h1>
-              <p className={styles.ContentP}>Estratégia com consciência, responsabilidade e <span>agilidade</span>. </p>
             </div>  
             <div className={styles.buttonAreaWhatsapp} style={{zIndex: 2}}>
               <a href="https://api.whatsapp.com/message/GE66DI4WCKWHJ1?autoload=1&app_absent=0" target="_blank">

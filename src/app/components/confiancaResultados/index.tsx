@@ -1,7 +1,7 @@
 "use client"
 import Image from 'next/image';
 import styles from './index.module.css';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { gql, useQuery } from '@apollo/client';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -35,7 +35,29 @@ export default function Confiaca() {
     }
   }`
   const { loading, error, data } = useQuery(dataQuery);
-  console.log(data)
+  const [slidesPerView, setSlidesPerView] = useState<'auto' | number>(3); // Inicialmente, defina para 3 slides por visualização
+
+  // Adicione um ouvinte de redimensionamento para verificar a largura da tela
+  useEffect(() => {
+    const handleResize = () => {
+      // Verifique a largura da tela
+      if (window.innerWidth < 1024) {
+        setSlidesPerView('auto');
+      } else {
+        setSlidesPerView(3);
+      }
+    };
+
+    // Execute a função de verificação de largura ao montar o componente e ao redimensionar a janela
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    // Remova o ouvinte de redimensionamento quando o componente for desmontado
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   if (loading) return <p>Cargando...</p>;
   if (error) return null;
   return (
@@ -52,25 +74,25 @@ export default function Confiaca() {
             </p>
             social midia component
           </div>
+          {data?.videos?.data && data.videos.data.length > 0 && (
             <Swiper
-              spaceBetween={50}
-              slidesPerView={3}
+              spaceBetween={10}
+              slidesPerView={slidesPerView}
+              centeredSlides={true}
               loop={false}
+              initialSlide={1}
               autoplay={{
-                delay: 1500, 
-                disableOnInteraction: false,
+                delay: 1500,
+                disableOnInteraction: true,
               }}
               className={styles.swiperMain}
             >
-            {data?.videos?.data?.map((video: any, index: number) => (
-                <>
+              {data?.videos?.data?.map((video: any, index: number) => (
                 <SwiperSlide key={index} className={styles.Slide}>
                   <a href={video?.attributes?.LinkVideo} target='_blank'>
                     <div
                       className={styles.VideoContainer}
-                      
                     >
-                      
                       <Image className={styles.playVideo} src={'/playvideo.png'} alt='playvideo' width={45} height={45}></Image>
                       <div className={styles.filter} style={{
                         backgroundImage: `url('https://montezano.bassodev.com.br/uploads/${video?.attributes?.ImagemVideo?.data?.attributes?.url}')`,
@@ -78,17 +100,10 @@ export default function Confiaca() {
                     </div>  
                   </a>
                 </SwiperSlide>
-
-                </>
-            ))}               
-              <SwiperSlide className={styles.Slide}>
-                <div className={styles.VideoContainer} style={{flexDirection: 'column'}}>
-                  <Image className={styles.playVideo} src={'/playvideo.png'} alt='playvideo' width={45} height={45}></Image>
-                  <h2 style={{color: "white"}}>Mais videos</h2>
-                  
-                </div>
-              </SwiperSlide>
+              ))}
             </Swiper>
+          )}
+
         </div>  
     </section>
   );

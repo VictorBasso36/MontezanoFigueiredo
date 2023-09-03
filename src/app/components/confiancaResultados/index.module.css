@@ -14,7 +14,7 @@
 }
 
 .ContainerResultados{
-    width: 50%;
+    width: 40%;
 }
 
 .ContainerResultados h2{
@@ -53,6 +53,7 @@
     border-radius: 30px;
     display: flex;
     overflow: hidden;
+    position: relative;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
@@ -62,7 +63,7 @@
 }
 
 .swiperMain{
-    width: 50%;
+    width: 55%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -74,12 +75,14 @@
     justify-content: center;
     position: relative;
     
+    
 }
 
 
 .playVideo{
     transition: all 300ms ease-in-out;
     z-index: 1;
+    pointer-events: none;
 }
 .Slide:hover .playVideo{
 
@@ -138,8 +141,14 @@
         align-items: center;
         justify-content: center;
     }
-    
-    
+    .swiperMain{
+        width: 100%;
+        margin-top: 80px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
 }
 
 @media screen and (min-width:0px) and (max-width: 550px){
@@ -175,7 +184,13 @@
         align-items: center;
         justify-content: center;
     }
-    
+    .swiperMain{
+        margin-top: 80px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
     
 }
 

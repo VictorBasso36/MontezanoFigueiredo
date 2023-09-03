@@ -1,6 +1,7 @@
 .main{
     width: 90%;
     display: flex;
+    max-width: var(--max-width);
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -39,4 +40,173 @@
 
 .ContentHere{
     margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.formHere form{
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+   .formHere form input[type="text"] {
+    transition: all 500ms ease-in-out;
+    margin-top: 10px;
+    /* Estilos globais para campos de texto */
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    width: 45%;
+  }
+  
+  /* Exemplos de estilos adicionais */
+  .formHere form input[type="text"]:hover {
+
+    /* Estilo quando o mouse passa por cima */
+    border-color: #333;
+  }
+  
+  .formHere form input[type="text"]:focus {
+    /* Estilo quando o campo de texto está em foco */
+    outline: none;
+    border-color: var(--suportColor);
+    box-shadow: 0 0 5px var(--suportColor)(0, 123, 255, 0.5);
+  }
+
+
+
+
+
+  .formHere form input[type="email"] {
+    transition: all 500ms ease-in-out;
+    margin-top: 10px;
+    /* Estilos globais para campos de texto */
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    width: 45%;
+  }
+  
+  /* Exemplos de estilos adicionais */
+  .formHere form input[type="email"]:hover {
+    /* Estilo quando o mouse passa por cima */
+    border-color: #333;
+  }
+  
+  .formHere form input[type="email"]:focus {
+    /* Estilo quando o campo de texto está em foco */
+    outline: none;
+    border-color: var(--suportColor);
+    box-shadow: 0 0 5px var(--suportColor)(0, 123, 255, 0.5);
+  }
+
+
+
+
+  .formHere form input[type="tel"] {
+    transition: all 500ms ease-in-out;
+    margin-top: 10px;
+    /* Estilos globais para campos de texto */
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    width: 45%;
+  }
+  
+  /* Exemplos de estilos adicionais */
+  .formHere form input[type="tel"]:hover {
+    /* Estilo quando o mouse passa por cima */
+    border-color: #333;
+  }
+  
+  .formHere form input[type="tel"]:focus {
+    /* Estilo quando o campo de texto está em foco */
+    outline: none;
+    border-color: var(--suportColor);
+    box-shadow: 0 0 5px var(--suportColor)(0, 123, 255, 0.5);
+  }
+
+
+
+  .formHere form textarea {
+    transition: all 500ms ease-in-out;
+    resize: none;
+    font-weight: weight;
+    margin-top: 10px;
+    /* Estilos globais para campos de texto multilinha */
+    font-size: 16px;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 12px;
+    width: 100%;
+    min-height: 100px; /* Altura mínima do textarea */
+  }
+  
+  /* Exemplos de estilos adicionais */
+  .formHere form textarea:hover {
+    /* Estilo quando o mouse passa por cima */
+    border-color: #333;
+  }
+  
+  .formHere form textarea:focus {
+    /* Estilo quando o textarea está em foco */
+    outline: none;
+    border-color: var(--suportColor);
+    box-shadow: 0 0 5px var(--suportColor)(0, 123, 255, 0.5);
+  }
+
+  
+    .formHere form input::placeholder,
+    .formHere form textarea::placeholder {
+    color: var(--mainColor); /* Cor do texto do placeholder */
+     /* Estilo de fonte do placeholder (opcional) */
+    }
+
+    /* Exemplo de estilo de foco para placeholders */
+    .formHere form input:focus::placeholder,
+    .formHere form textarea:focus::placeholder {
+    color: #ccc; /* Cor do texto do placeholder quando o elemento está em foco */
+    }
+
+    .buttonmain{
+        transition: all 500ms ease-in-out;
+        margin-top: 10px;
+        background-color: var(--suportColor);
+        padding: 10px 20px;
+        border-radius: 30px;
+        border: none;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: normal;
+        font-size: 22px;
+        height: 45px;
+        outline: none;
+        cursor: pointer;
+    }
+
+    .buttonmain:hover{
+        background-color: var(--mainColor);
+    }
+
+.ContatAreaCard{
+    flex-direction: column;
+    display: flex;
+    text-align: left;
+    margin-top: 20px;
+    justify-content: center;
+    margin-left: 10px;
+    align-items: flex-start;
+}
+
+.SocialMidiaCard{
+    margin-top: 30px;
+    margin-left: 10px;
+    width: 100%;
+    text-align: left;
 }

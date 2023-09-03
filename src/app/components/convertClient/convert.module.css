@@ -8,6 +8,7 @@
 }
 .ConvertContainer{
     width: 90%;
+    max-width: var(--max-width);
     display: flex;
     z-index: 2;
     align-items: center;

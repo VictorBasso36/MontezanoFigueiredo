@@ -20,13 +20,14 @@ export default function ModalConvert() {
                     <input type="email" placeholder='E-mail:' />
                     <input type="tel" placeholder='Telefone:' />
                     <input type="text" placeholder='CNPJ ou CPF:' />
-                    <textarea placeholder='Deixe sua mensagem:'/>
-                    <button>ENVIAR</button>
+                    <textarea placeholder='Deixe sua mensagem:'/><br />
+                    <button className={styles.buttonmain} type='submit'>ENVIAR</button>
                 </form>
             </div>
             <div className={styles.ContatArea}>
                 <div className={styles.ContatAreaCard}>
                     <h3>Contatos</h3>
+                    <button className={styles.buttonmain}>Contato <Image src={'/whatsapp.svg'} style={{marginLeft: '20px'}} width={30} height={30} alt={''}/></button>
                     <a href="tel:">+55 (11) 4314-1360</a>
                     <a href="">
                         Rua Dr. Eduardo de Souza Aranha, 387 15º andar CJ 152 - Itaim Bibi - São Paulo.
