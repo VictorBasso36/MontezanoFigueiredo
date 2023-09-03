@@ -11,7 +11,7 @@ export default function Servicos() {
     <>
     <Navbar/>
     <main className={styles.main}>
-      <Banner />
+      <Banner id='' title=''/>
     </main>
     <AtuacaoAreas/>
     <Convert/>

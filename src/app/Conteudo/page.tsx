@@ -11,7 +11,7 @@ export default function Noticias() {
     <>
     <Navbar/>
     <main className={styles.main}>
-      <Banner />
+      <Banner id='' title='' />
     </main>
     <NoticiasLast/>
     <Convert/>
