@@ -8,9 +8,10 @@ interface PropsOfCredit{
     title: string;
     description: string;
     url: string;
+    social: string;
 }
 
-export default function CreditBanner( {title, description, url}:PropsOfCredit) {
+export default function CreditBanner( {title, description, url, social}:PropsOfCredit) {
 
   
   return (
@@ -26,9 +27,11 @@ export default function CreditBanner( {title, description, url}:PropsOfCredit) {
                 <p>
                     {description}
                 </p>
-                <button>
-                    Entre em contato !
-                </button>
+                <a href={social}>
+                    <button>
+                        Tire suas duvidas !
+                    </button>
+                </a>
             </div>
 
         </div>

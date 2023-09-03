@@ -139,7 +139,7 @@
 
 .ContentMainBanner p{
     color: white;
-    font-size: 28px;
+    font-size: 22px;
     max-width: 90%;
 }
 
@@ -161,6 +161,18 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+
+.atuacaoBanner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.atuacaoBanner .preTitle{
+    width: 90%;
 }
 
 

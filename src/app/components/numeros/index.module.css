@@ -1,0 +1,80 @@
+.MainWidth{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.MainWidth p{
+    margin-bottom: 10px;
+    font-size: 22px;
+}
+
+.MainWidth p strong{
+    font-weight: bold;
+    color: var(--suportColor);
+}
+
+.MainTitlemuber {
+    font-size: var(--titleSize);
+    font-weight: normal;
+    margin-bottom: 30px;
+}
+
+.MainTitlemuber strong{
+    font-weight: bold;
+}
+
+
+.numbersHere{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: var(--max-width);
+}
+
+.NumebrCard{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 260px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.NumebrCard h2{
+    margin-bottom: unset;
+    font-weight: normal;
+    font-size: var(--titleSize);
+    color: var(--suportColor);
+}
+.NumebrCard h2 span{
+    margin-bottom: unset;
+    font-weight: normal;
+    color: var(--mainColor);
+}
+
+.NumebrCard p{
+    width: 95%;
+    font-size: 22px;
+}
+
+
+@media screen and (min-width:0px) and (max-width: 550px){
+    .MainTitlemuber {
+        font-size: 8vw;
+        font-weight: normal;
+        margin-bottom: 30px;
+    }
+
+    .NumebrCard h2{
+        margin-bottom: unset;
+        font-weight: normal;
+        font-size: var(--titleSize);
+        color: var(--suportColor);
+    }
+}

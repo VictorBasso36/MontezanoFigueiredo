@@ -12,21 +12,21 @@ export default function Convert() {
     <div className={styles.Convert}>
         <div className={styles.ConvertContainer}>
             <div className={styles.TitleContainer}>
-                <p>impulsione o seu negócio</p><br />
+                <p>Impulsione o seu negócio</p><br />
                 <h5>INOVAÇÃO EMPRESÁRIAL E <strong>TRIBUTÁRIA</strong></h5> 
             </div>
             <div className={styles.ConvertDescription}>
                 <p>A trajetória do empresário é longa e cheia de obstáculos, mas não precisa ser instável, nosso objetivo é mostrar o melhor caminho. <a href="https://api.whatsapp.com/message/GE66DI4WCKWHJ1?autoload=1&app_absent=0"><strong>Vem conosco ?</strong></a></p>
             </div>
             <div className={styles.buttonArea}>
-                <a href="https://api.whatsapp.com/message/GE66DI4WCKWHJ1?autoload=1&app_absent=0" target='_blank'>
+                <a href="/Contato" target='_blank'>
                     <button>
                         
                         <p>Contato </p> 
-                            <Image src={'/whatsapp.svg'} width={30} height={30} alt={''}/>
+                        <Image src={'/whatsapp.svg'} width={30} height={30} alt={''}/>
                     </button>
                 </a>
-                <a href=""><p className={styles.TenhoUmDuvida}>Tenho Uma Dúvida</p></a>
+                <a href="/Contato"><p className={styles.TenhoUmDuvida}>Tenho Uma Dúvida</p></a>
             </div>
 
             

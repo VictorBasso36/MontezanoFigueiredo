@@ -16,12 +16,16 @@ export default function Home() {
     <>
     <Navbar/>
     <main className={styles.main}>
-      <Banner id='' title=''/>
+      <Banner TempoLeitura={0} TituloPrincipal='' TopicoCard='' bannerURL='' publishedAt='' id='' title=''/>
     </main>
     <Confiaca/>
     <BannerDestaque />
     <AtuacaoAreas/>
+    <br />
     <Numeros/>
+    <br />
+    <br />
+    <br />
     <NoticiasLast/>
     <Convert/>
     <Footer/>

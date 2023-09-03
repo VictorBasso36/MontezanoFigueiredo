@@ -162,14 +162,19 @@
   
     .formHere form input::placeholder,
     .formHere form textarea::placeholder {
-    color: var(--mainColor); /* Cor do texto do placeholder */
-     /* Estilo de fonte do placeholder (opcional) */
+        color: var(--mainColor); 
+        transition: all 500ms ease-in-out;
+        color: #ccc;    
+        font-weight: normal;
+        font-family: 'Josefin Sans', sans-serif;
     }
 
     /* Exemplo de estilo de foco para placeholders */
     .formHere form input:focus::placeholder,
     .formHere form textarea:focus::placeholder {
-    color: #ccc; /* Cor do texto do placeholder quando o elemento está em foco */
+        color: var(--mainColor);
+        font-weight: normal;
+        font-family: 'Josefin Sans', sans-serif;
     }
 
     .buttonmain{
@@ -204,9 +209,65 @@
     align-items: flex-start;
 }
 
+.ContatAreaCard h3{
+    font-size: 22px;
+}
 .SocialMidiaCard{
     margin-top: 30px;
     margin-left: 10px;
     width: 100%;
     text-align: left;
+}
+
+.SocialMidiaCard h3{
+    font-size: 22px;
+    margin-bottom: 5px;
+}
+
+
+
+@media screen and (min-width: 850px) and (max-width:1024px) {
+    .ContentHere{
+        flex-direction: column  ;
+    }
+    .main h2{
+        font-size: 35px;
+        font-weight: normal;
+        margin-top: 5px;
+
+    }
+
+}
+
+@media screen and (min-width: 0px) and (max-width:550px) {
+    .ContentHere{
+        flex-direction: column;
+        width: 100%;
+    }
+    .main h2{
+        font-size: 8vw;
+        font-weight: normal;
+        margin-top: 5px;
+        text-align: left;
+
+    }
+
+    .ptitle{
+        font-size: 18px;
+        text-align: center;
+        margin-top: 30px;
+    }
+    
+    .ptitle strong{
+        font-weight: bold;
+        color: var(--suportColor);
+    }
+
+    .ptitle2{
+        flex-direction: column;
+        text-align: left;
+        font-size: 22px;
+        width: 100%;
+    }
+
 }

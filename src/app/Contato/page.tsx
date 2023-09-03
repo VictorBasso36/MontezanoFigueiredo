@@ -13,7 +13,7 @@ export default function Contato() {
     <>
     <Navbar/>
     <main className={styles.main}>
-      <Banner id='' title=''/>
+      <Banner TempoLeitura={1} TituloPrincipal='' TopicoCard='' bannerURL='' publishedAt='' id='' title=''/>
     </main>
     <ModalConvertComponent/>
     <Localize/>

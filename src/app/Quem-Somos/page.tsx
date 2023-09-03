@@ -59,7 +59,7 @@ export default function QuemSomos() {
     <>
     <Navbar/>
     <main className={styles.main}>
-      <Banner id='' title=''/>
+      <Banner TempoLeitura={0} TituloPrincipal='' TopicoCard='' bannerURL='' publishedAt='' id='' title=''/>
     </main>
     <div className={styles.MainTtitle}>
       <div className={styles.MainConteiner}>
@@ -69,7 +69,7 @@ export default function QuemSomos() {
         <br />
         <br />
         <br />
-        <ButtonSupport buttonLink='gogle.com' buttonText='Contato'/>
+        <ButtonSupport buttonLink='/Conteudo' buttonText='Contato'/>
       </div>
     </div>
     <br />

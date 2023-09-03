@@ -4,6 +4,7 @@ import styles from './footer.module.css'
 import { useEffect, useMemo, useState } from 'react'
 import { gql, useQuery } from '@apollo/client';
 import Link from 'next/link';
+import SocialMidiaIcon from '../socialMidiaIcons';
 export default function Footer() {
   const GET_ATUACOES = gql`
     query Atuacoes {
@@ -51,6 +52,7 @@ export default function Footer() {
                 <li><a href="/Conteudo">Últimas Notícias</a></li>
                 <li><a href="/Atuacao">Todos os serviços</a></li>
                 <li><a href="/Contato">Social Media</a></li>
+                <li><SocialMidiaIcon transformScale={1.1}/></li>
               </ul>
           </div>
           <div className={styles.contentBlock}>
@@ -65,7 +67,7 @@ export default function Footer() {
         <div className={styles.footerCopy} id="Areas-de-Atuacao">
             <h6>© 2023 MONTEZANO FIGUEIREDO. Todos os Direitos Reservados.</h6>
 
-            <a href=""><p>•<strong> Privacidade</strong> e <strong>Termos</strong> de Uso.</p></a>
+            <Link href={'/Politica-de-privacidade'}><p>•<strong> Privacidade</strong> e <strong>Termos</strong> de Uso.</p></Link>
         </div>
       </div>
     </footer>

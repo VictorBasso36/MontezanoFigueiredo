@@ -1,0 +1,12 @@
+.divSocialMidia{
+    display: flex;
+    width: max-content;
+    margin-right: 10px;
+}
+.divSocialMidia a{
+    margin-left: 10px;
+}
+
+.divSocialMidia a:hover{
+    opacity: 0.8;
+}

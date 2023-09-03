@@ -5,6 +5,7 @@ import ButtonMain from '../buttons/buttonMain';
 import ButtonSupport from '../buttons/buttonSuport';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
+import SocialMidiaIcon from '../socialMidiaIcons';
 
 export default function ModalConvert() {
 
@@ -35,6 +36,7 @@ export default function ModalConvert() {
                 </div>
                 <div className={styles.SocialMidiaCard}>
                     <h3>Social Media</h3>
+                    <SocialMidiaIcon transformScale={1.3}/>
                 </div>
             </div>
         </div>

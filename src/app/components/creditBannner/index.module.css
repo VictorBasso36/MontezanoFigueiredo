@@ -15,19 +15,19 @@
 }
 
 .PhotoHere{
-    width: 280px;
+    width: 320px;
     z-index: 2;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 280px;
+    height: 320px;
     border-radius: 12px;
     background-color: var(--suportColor);
 }
 
 .ContentHere{
     display: flex;
-    height: 250px;
+    height: 290px;
     border-radius: 12px;
     margin-left: -20px;
     justify-content: flex-start;
@@ -66,7 +66,8 @@
 }
 
 .ContentHere button:hover{
-    background-color: var(--mainColor);
+    background-color: var(--suportColor);
+    opacity: 0.1;
 }
 
 

@@ -73,6 +73,7 @@
 .PostHere p{
     font-size: 22px;
     margin-bottom: 20px;
+    word-wrap: break-word;
 }
 
 .PostHere blockquote p{
@@ -126,10 +127,12 @@
 
 .GhostWhiter{
     font-weight: bold;
+    word-wrap: break-word;
     font-size: 22px;
 }
 
 .GhostWhiter span{
+    word-wrap: break-word;
     color: var(--suportColor);
 }
 

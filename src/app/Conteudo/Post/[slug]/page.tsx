@@ -27,7 +27,7 @@ export default function ContentPostagem({ params }: { params: { slug: string } }
           TituloCard
           TempoLeitura
           SiglaLocalEscritor
-          MidiaSocialEscritor
+          MidiaSocialEscritorLink
           LocalEscritor
           FotoCard {
             data {
@@ -36,11 +36,28 @@ export default function ContentPostagem({ params }: { params: { slug: string } }
               }
             }
           }
+          ImagemBanner {
+            data {
+              attributes {
+                url,
+              }
+            }
+          },
           EscritoPor
           DescricaoCard
           BlogPost
+          Fonte
+          DescricaoAdvogado
+          AdvogadoResponsavel
+          FotoAdvogado {
+            data {
+              attributes {
+                url
+              }
+            }
+          }
         }
-      }
+      }    
     }
   }`
   const { loading, error, data } = useQuery(GET_POST, {
@@ -48,15 +65,22 @@ export default function ContentPostagem({ params }: { params: { slug: string } }
       blogId: params.slug,
     },
   });
-  console.log(data?.blog?.data?.attributes?.BlogPost)
+  console.log('bannerinfo',data?.blog?.data?.attributes?.ImagemBanner?.data?.attributes?.url)
   if (loading) return <p>Cargando...</p>;
   if (error) return null;
+
   return (
     <>
       <Navbar/>
-      <Banner title='' id=''/>
-      <ContentPost BlogPost={data?.blog?.data?.attributes?.BlogPost} dataPost='' TituloPreConteudo={data?.blog?.data?.attributes?.TituloPreConteudo}/>
-      <CreditBanner description='' title='' url=''/>
+      <Banner title='' id='' TopicoCard={data?.blog?.data?.attributes?.TopicoCard} publishedAt={data?.blog?.data?.attributes?.publishedAt} TituloPrincipal={data?.blog?.data?.attributes?.TituloPrincipal} TempoLeitura={data?.blog?.data?.attributes?.TempoLeitura}  bannerURL={data?.blog?.data?.attributes?.ImagemBanner?.data?.attributes?.url} />
+      <ContentPost
+      escritoPor={data?.blog?.data?.attributes?.EscritoPor}
+      MidiaSocialEscritorLink={data?.blog?.data?.attributes?.MidiaSocialEscritorLink}
+      siglaEscrito={data?.blog?.data?.attributes?.SiglaLocalEscritor}
+      localEscrito={data?.blog?.data?.attributes?.LocalEscritor}
+      fonte={data?.blog?.data?.attributes?.Fonte}
+      BlogPost={data?.blog?.data?.attributes?.BlogPost} dataPost='' TituloPreConteudo={data?.blog?.data?.attributes?.TituloPreConteudo}/>
+      <CreditBanner description={data?.blog?.data?.attributes?.DescricaoAdvogado} title={data?.blog?.data?.attributes?.AdvogadoResponsavel} url={data?.blog?.data?.attributes?.FotoAdvogado?.data?.attributes?.url} social={data?.socialMidia?.data?.attributes?.Whatsapp}/>
       <br/>
       <NoticiasLast/>
       <Convert/>

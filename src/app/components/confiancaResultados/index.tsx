@@ -7,6 +7,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
 import 'swiper/css';
+import { Autoplay, Virtual } from 'swiper/modules';
+import SocialMidiaIcon from '../socialMidiaIcons';
+import Loading from '../loading';
 
 export default function Confiaca() {
   const dataQuery = gql`
@@ -57,10 +60,23 @@ export default function Confiaca() {
       window.removeEventListener('resize', handleResize);
     };
   }, []);
+  const [slides, setSlides] = useState([]);
 
-  if (loading) return <p>Cargando...</p>;
+  useEffect(() => {
+    if (!loading && data?.videos?.data) {
+      setSlides(data.videos.data);
+    }
+  }, [loading, data]);
   if (error) return null;
   return (
+    loading 
+      ? 
+      <section className={styles.mainSection}>
+        <div className={styles.ResutadoContainer} style={{justifyContent: 'center'}}>
+        <Loading/> 
+        </div>
+      </section>
+      :
     <section className={styles.mainSection}>
         <div className={styles.ResutadoContainer}>
           <div className={styles.ContainerResultados}>
@@ -72,32 +88,41 @@ export default function Confiaca() {
             <p className={styles.ResultadoDescription}>
               A Montezano Figueiredo é um <span>Hub de inteligência</span> que alinha a Gestão Tributária e Planejamento Estratégico. 
             </p>
-            social midia component
+            <br />
+            <SocialMidiaIcon transformScale={1.4}/>
           </div>
           {data?.videos?.data && data.videos.data.length > 0 && (
             <Swiper
               spaceBetween={10}
               slidesPerView={slidesPerView}
               centeredSlides={true}
-              loop={false}
-              initialSlide={1}
+              loop={true}
+              grabCursor={true}
+              modules={[Autoplay, Virtual]}
               autoplay={{
-                delay: 1500,
+                delay: 2000,
                 disableOnInteraction: true,
               }}
               className={styles.swiperMain}
             >
-              {data?.videos?.data?.map((video: any, index: number) => (
+              {slides.map((video: any, index: number) => (
                 <SwiperSlide key={index} className={styles.Slide}>
                   <a href={video?.attributes?.LinkVideo} target='_blank'>
-                    <div
-                      className={styles.VideoContainer}
-                    >
-                      <Image className={styles.playVideo} src={'/playvideo.png'} alt='playvideo' width={45} height={45}></Image>
-                      <div className={styles.filter} style={{
-                        backgroundImage: `url('https://montezano.bassodev.com.br/uploads/${video?.attributes?.ImagemVideo?.data?.attributes?.url}')`,
-                      }}></div>
-                    </div>  
+                    <div className={styles.VideoContainer}>
+                      <Image
+                        className={styles.playVideo}
+                        src={'/playvideo.png'}
+                        alt='playvideo'
+                        width={45}
+                        height={45}
+                      />
+                      <div
+                        className={styles.filter}
+                        style={{
+                          backgroundImage: `url('https://montezano.bassodev.com.br/uploads/${video?.attributes?.ImagemVideo?.data?.attributes?.url}')`,
+                        }}
+                      ></div>
+                    </div>
                   </a>
                 </SwiperSlide>
               ))}
@@ -106,5 +131,6 @@ export default function Confiaca() {
 
         </div>  
     </section>
+
   );
 }

@@ -6,14 +6,26 @@ import ButtonSupport from '../buttons/buttonSuport';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { gql, useQuery } from '@apollo/client';
+import SocialMidiaIcon from '../socialMidiaIcons';
 interface Props {
   id: string;
   title: string;
+  TopicoCard: string;
+  publishedAt: string;
+  TituloPrincipal: string;
+  TempoLeitura: number;
+  bannerURL: string;
 }
 export default function Banner({
   id,
   title,
+  TopicoCard,
+  publishedAt,
+  TituloPrincipal,
+  TempoLeitura,
+  bannerURL
 }:Props) {
+  console.log("eaea",bannerURL)
   const pathname = usePathname();
   const query = gql`
   query BannersFoto {
@@ -61,6 +73,13 @@ export default function Banner({
               }
             }
           }
+        }
+      }
+    }
+    socialMidia {
+      data {
+        attributes {
+          Whatsapp
         }
       }
     }
@@ -139,32 +158,36 @@ export default function Banner({
         <>  
           <div className={styles.atuacaoBanner} style={{zIndex: 2}}>
             <div className={styles.Content}>
-                <p className={styles.preTitle}><strong>-</strong>Excelência em Gestão Tributária e Planejamento Estratégico<strong>-</strong></p>
-                <h1 className={styles.AtuacaoTipe}>SERVIÇOS <strong>PERSONALIZADOS</strong></h1>
-                <p className={styles.ContentP}>Estratégia com consciência, responsabilidade e <span>agilidade</span>. </p>
+                <p><strong>-</strong>  {TopicoCard} <strong>-</strong></p>
+                <h1>{TituloPrincipal}</h1>
+                <p>{publishedAt}  - {TempoLeitura} Minutos de Leitura</p>
             </div>  
             <div className={styles.buttonArea} style={{zIndex: 2}}>
-              <ButtonMain buttonLink='/Areas-de-Atuacao#Servicos' buttonText='Serviços' />
-              <ButtonSupport buttonLink='/Quem-Somos' buttonText='Conheça' />
+              <button>
+                Fale Conosco
+              </button>
+              <a href="">
+                <button>Leia Sobre</button>
+              </a>
             </div>
           </div>
-          <div className={styles.BackgroundFilter} style={{backgroundImage: 'url("/bannerinmage.webp")'}}></div>
+          <div className={styles.BackgroundFilter} style={{backgroundImage: `url("https://montezano.bassodev.com.br${bannerURL}"`}}></div>
         </>  
         }
         {pathname === "/Conteudo" &&    
         <>  
           <div className={styles.BannerContent} style={{zIndex: 2, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', width: '90%'}}>
             <div className={styles.Content}>
-                <p className={styles.preTitle}><strong>-</strong>Excelência em Gestão Tributária e Planejamento Estratégico<strong>-</strong></p>
+                <p className={styles.preTitle}><strong>-</strong>Fique a frente de todas as notícias que impactam seu negócio<strong>-</strong></p>
                 <h1>PORTAL DE <strong>CONTEÚDO</strong></h1>
-                <p className={styles.ContentP}>Estratégia com consciência, responsabilidade e <span>agilidade</span>. </p>
+                
             </div>  
             <div className={styles.buttonArea} style={{zIndex: 2}}>
-              <ButtonMain buttonLink='/Areas-de-Atuacao#Servicos' buttonText='Serviços' />
-              <ButtonSupport buttonLink='/Quem-Somos' buttonText='Conheça' />
+              <ButtonMain buttonLink='#Servicos' buttonText='Serviços' />
+              <ButtonSupport buttonLink='/Contato' buttonText='Contato' />
             </div>
           </div>
-          <div className={styles.BackgroundFilter} style={{ backgroundImage: `url("https://montezano.bassodev.com.br/uploads/${data?.bannersFoto?.data?.attributes?.ConteudoFoto?.data?.attributes?.url}")`}}></div>
+          <div className={styles.BackgroundFilter} style={{ backgroundImage: `url("https://montezano.bassodev.com.br${data?.bannersFoto?.data?.attributes?.ConteudoFoto?.data?.attributes?.url}")`}}></div>
   
         </> 
         } 
@@ -173,9 +196,10 @@ export default function Banner({
           <div className={styles.contatoBanner} style={{zIndex: 2}}>
             <div className={styles.Content}>
               <h1 className={styles.AtuacaoTipe}>CONTATO <strong>PESSOAL</strong></h1>
+              <SocialMidiaIcon transformScale={1.1}/>
             </div>  
             <div className={styles.buttonAreaWhatsapp} style={{zIndex: 2}}>
-              <a href="https://api.whatsapp.com/message/GE66DI4WCKWHJ1?autoload=1&app_absent=0" target="_blank">
+              <a href={data?.socialMidia?.data?.attributes?.Whatsapp} target="_blank">
                 <button className={styles.whatsappbanner}>
                   <p>Contato</p>
                   <Image src={'/whatsapp.svg'} width={30} height={30} alt={''}/>

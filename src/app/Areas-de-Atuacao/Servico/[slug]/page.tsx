@@ -95,7 +95,7 @@ console.log("@@@@", data)
       <br />
       <br />
       {data?.atuacaos?.data?.attributes?.DescricaoAdvogado}
-      <CreditBanner description={data?.atuacaos?.data[0]?.attributes?.DescricaoAdvogado} 
+      <CreditBanner social="/Contato" description={data?.atuacaos?.data[0]?.attributes?.DescricaoAdvogado} 
       title={data?.atuacaos?.data[0]?.attributes?.AdvogadoResponsavel} url={data?.atuacaos?.data[0]?.attributes?.FotoAdvogado?.data?.attributes?.url}/>
       <Confiaca />
       <AtuacaoAreas/>

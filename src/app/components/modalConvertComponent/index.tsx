@@ -12,9 +12,6 @@ export default function ModalConvertComponent() {
   return (
     <div className={styles.mainBackdrop} >
        <div className={styles.mainModal}>
-            <div className={styles.mainModalHeader}>
-                x
-            </div>
             <div className={styles.mainModalContent}>
                 <ModalConvert/>
             </div>

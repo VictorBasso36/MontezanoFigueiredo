@@ -4,21 +4,21 @@ import styles from './navbar.module.css'
 import { useEffect, useMemo, useState } from 'react'
 import Link from 'next/link';
 import { useRouter, usePathname } from 'next/navigation'
+import SocialMidiaIcon from '../socialMidiaIcons';
 
 export default function Navbar() {
     const pathname = usePathname();
     const [menu, setMenu] = useState(false);
   
     useEffect(() => {
-      if (menu) {
-       
-        window.scrollTo(0, 0);
-        document.body.style.overflowY = 'hidden';
-      } else {
-       
-        document.body.style.overflowY = 'unset';
-      }
-    }, [menu]);
+        if (menu) {
+        document.documentElement.style.overflow = "hidden";
+          window.scrollTo(0, 0)
+        } else {
+        document.documentElement.style.overflow = "";
+          window.scrollTo(0, 0)
+        }
+      }, [menu]);
     
   return (
     <>
@@ -35,11 +35,9 @@ export default function Navbar() {
                         <li><Link href="/Conteudo"><p style={{ marginBottom: 'var(--suportColor)', color: pathname.includes('Conteudo') ? 'var(--suportColor)' : 'white' }}>CONTEÚDO</p></Link></li>
                         <li><Link href="/Contato"><p style={{ marginBottom: 'var(--suportColor)', color: pathname.includes('Contato') ? 'var(--suportColor)' : 'white' }}>CONTATO</p></Link></li>
                     </ul>
-                    <ul className={styles.ModalsocialMidia}>
-                        <li><a href="/" title='Facebook Montezano Figueiredo'><Image src='/fbicon.svg' width={25} height={25} alt={''}></Image></a></li>
-                        <li><a href="/" title='Instagram Montezano Figueiredo'><Image src='/instagramicon.svg' width={25} height={25} alt={''}></Image></a></li>
-                        <li><a href="/" title='Linkedin Montezano Figueiredo'><Image src='/linkedinicon.svg' width={25} height={25} alt={''}></Image></a></li>
-                    </ul>
+                    <div className={styles.ModalsocialMidia}>
+                        <SocialMidiaIcon transformScale={1.1}/>
+                    </div>
                 </div>
             </div>
         </div>
@@ -67,11 +65,9 @@ export default function Navbar() {
                     <li><Link href="/Contato"><p style={{ marginBottom: 'var(--suportColor)', color: pathname.includes('Contato') ? 'var(--suportColor)' : 'white' }}>CONTATO</p></Link></li>
                     
                 </ul>
-                <ul className={styles.socialMidia}>
-                    <li><a href="/" title='Facebook Montezano Figueiredo'><Image src='/fbicon.svg' width={25} height={25} alt={''}></Image></a></li>
-                    <li><a href="/" title='Instagram Montezano Figueiredo'><Image src='/instagramicon.svg' width={25} height={25} alt={''}></Image></a></li>
-                    <li><a href="/" title='Linkedin Montezano Figueiredo'><Image src='/linkedinicon.svg' width={25} height={25} alt={''}></Image></a></li>
-                </ul>
+                <div className={styles.socialMidia}>
+                    <SocialMidiaIcon transformScale={1.1}/>
+                </div>
                 <div className={styles.hambMenu} onClick={() => setMenu(!menu)}>
                     <div className={styles.hambMenuContainer}>
                         <div></div>

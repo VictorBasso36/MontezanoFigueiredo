@@ -5,6 +5,7 @@ import React from 'react';
 import CardAtuacao from '../cards/cardAtuacao/caardAtuacao';
 import CardServico from '../cards/cardServico';
 import { gql, useQuery } from '@apollo/client';
+import Loading from '../loading';
 
 export default function AtuacaoAreas() {
 
@@ -25,11 +26,17 @@ export default function AtuacaoAreas() {
 
   const { loading, error, data } = useQuery(GET_ATUACOES);
 
-  if (loading) return <p>Cargando...</p>;
   if (error) return null;
 
-  console.log(data);
   return (
+    loading 
+    ?
+    <section className={styles.MainSection}>
+      <div className={styles.ContainerArea}>
+        <Loading />
+      </div>
+    </section>
+    :
     <section className={styles.MainSection}>
         <div className={styles.ContainerArea}>
             <div className={styles.MainTitleHere}>
@@ -37,7 +44,7 @@ export default function AtuacaoAreas() {
                 <h2><strong style={{color:'var(--mainColor)'}}>ACELERE</strong> O CRESCIMENTO DO SEU NEGÓCIO <strong> DE FORMA ESTRATÉGICA </strong></h2>
             </div>
         </div>
-        <div className={styles.CardHere}>
+        <div className={styles.CardHere} id="Servicos">
             {/* <CardAtuacao /> */}
             {data?.atuacaos?.data?.map((atuacao: any, index: React.Key | null | undefined) => (
                 <CardServico title={atuacao?.attributes?.TituloCard} description={atuacao?.attributes?.DescricaoPrincipal} id={'/Areas-de-Atuacao/Servico/' + atuacao?.id} key={index} />
