@@ -67,8 +67,8 @@ export default function Footer() {
         <div className={styles.footerCopy} id="Areas-de-Atuacao">
             <h6>© 2023 MONTEZANO FIGUEIREDO. Todos os Direitos Reservados.</h6>
 
-            <Link href={'/Politica-de-privacidade'}><p>•<strong> Privacidade</strong> e <strong>Termos</strong> de Uso.</p></Link>
-        </div>
+            {/* <Link href={'/Politica-de-privacidade'}><p>•<strong> Privacidade</strong> e <strong>Termos</strong> de Uso.</p></Link>
+        */}</div> 
       </div>
     </footer>
   )
