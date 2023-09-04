@@ -6,6 +6,7 @@ import ButtonSupport from '../buttons/buttonSuport';
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
 import { gql, useQuery } from '@apollo/client';
+import dayjs from 'dayjs';
 import SocialMidiaIcon from '../socialMidiaIcons';
 interface Props {
   id: string;
@@ -127,8 +128,7 @@ export default function Banner({
                 <h1 className={styles.AtuacaoTipe}>SERVIÇOS <strong>PERSONALIZADOS</strong></h1>
                 <p className={styles.ContentP}>Estratégia com consciência, responsabilidade e <span>agilidade</span>. </p>
             </div>  
-            <div className={styles.buttonArea} style={{zIndex: 2}}>
-              <ButtonMain buttonLink='/Areas-de-Atuacao' buttonText='Serviços' />
+            <div className={styles.buttonArea} style={{zIndex: 2, justifyContent: 'center'}}>
               <ButtonSupport buttonLink='/Quem-Somos' buttonText='Conheça' />
             </div>
           </div>
@@ -156,17 +156,16 @@ export default function Banner({
         {pathname.includes("/Conteudo/Post/") &&   
         <>  
           <div className={styles.atuacaoBanner} style={{zIndex: 2}}>
-            <div className={styles.Content}>
-                <p><strong>-</strong>  {TopicoCard} <strong>-</strong></p>
-                <h1>{TituloPrincipal}</h1>
-                <p>{publishedAt}  - {TempoLeitura} Minutos de Leitura</p>
+            <div className={styles.ContentMain}>
+                <p className={styles.ContentTopic}><strong>-</strong>  {TopicoCard} <strong>-</strong></p>
+                <h1 className={styles.MainTitleContent}>{TituloPrincipal}</h1>
+                <p className={styles.ContentMainBlog}>{dayjs(publishedAt).format('DD/MM/YYYY')} <span>-</span> {TempoLeitura} Minutos de Leitura</p>
             </div>  
-            <div className={styles.buttonArea} style={{zIndex: 2}}>
-              <button>
-                Fale Conosco
-              </button>
-              <a href="">
-                <button>Leia Sobre</button>
+            <div className={styles.buttonAreaBlog} style={{zIndex: 2}}>
+              <a href="/Contato">
+                <button>
+                  Fale Conosco
+                </button>
               </a>
             </div>
           </div>
@@ -181,8 +180,7 @@ export default function Banner({
                 <h1>PORTAL DE <strong>CONTEÚDO</strong></h1>
                 
             </div>  
-            <div className={styles.buttonArea} style={{zIndex: 2}}>
-              <ButtonMain buttonLink='#Servicos' buttonText='Serviços' />
+            <div className={styles.buttonArea} style={{zIndex: 2, justifyContent: 'center'}}>
               <ButtonSupport buttonLink='/Contato' buttonText='Contato' />
             </div>
           </div>

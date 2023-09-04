@@ -15,6 +15,10 @@
 .textArea{
     margin-left: 20px;
     margin-top: 10px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .pretitle{
@@ -34,4 +38,276 @@
 
 .Description{
     font-size: 26px;
+}
+
+
+
+
+.areaAtuacaoDescription{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.areaAtuacaoDescriptionContainer{
+    width: 90%;
+    max-width: var(--max-width);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.PreTitle{
+    font-size: 26px;
+}
+.PreTitle strong{
+    color: var(--suportColor);
+}
+
+.areaAtuacaoDescription h2{
+    text-align: center;
+    font-weight: normal;
+    font-size: var(--titleSize);
+}
+
+.areaAtuacaoDescription h2 strong{
+    color: var(--suportColor);
+}
+
+
+.descriptionSecond{
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    width: 70%;
+    text-align: center;
+}
+
+.cardArea{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.CardService{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.Mardown{
+    color: var(--suportColor);
+    font-size: 32px;
+}
+
+.ServiceLine{
+    font-size: 28px;
+    margin-left: 10px;
+    font-weight: bold;
+    margin-bottom: -10px;
+}
+
+
+@media screen and (min-width: 850px) and (max-width: 1024px){
+    .mainTitle{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .mainTitleContainer{
+        width: 90%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        max-width: var(--max-width);
+    }
+
+    .textArea h1{
+        text-align: center;
+        font-size: var(--titleSize);
+    }
+
+    .textArea{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    
+}
+
+@media screen and (min-width: 550px) and (max-width: 850px){
+    .mainTitle{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .mainTitleContainer{
+        width: 90%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        max-width: var(--max-width);
+    }
+
+    .textArea h1{
+        text-align: center;
+        font-size: 40px;
+    }
+
+    .textArea{
+        text-align: center;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 30px;
+    }
+    
+    .areaAtuacaoDescription h2{
+        text-align: center;
+        font-weight: normal;
+        font-size: 40px;
+    }
+    
+    .areaAtuacaoDescription h2 strong{
+        color: var(--suportColor);
+    }
+}
+
+
+@media screen and (min-width: 0px) and (max-width: 550px){
+    .mainTitle{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .mainTitleContainer{
+        width: 90%;
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+        justify-content: center;
+        max-width: var(--max-width);
+    }
+
+    .textArea h1{
+        text-align: left;
+        font-size: 9vw;
+    }
+
+    .textArea{
+        text-align: left;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 22px;
+    }
+    
+    .areaAtuacaoDescription h2{
+        text-align: center;
+        font-weight: normal;
+        font-size: 40px;
+    }
+    
+    .areaAtuacaoDescription h2 strong{
+        color: var(--suportColor);
+    }
+    .PreTitle{
+        text-align: left;
+        font-size: 26px;
+    }
+    .PreTitle strong{
+        color: var(--suportColor);
+    }
+
+    .areaAtuacaoDescription{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .areaAtuacaoDescriptionContainer{
+        width: 90%;
+        max-width: var(--max-width);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
+    
+    .PreTitle{
+        font-size: 26px;
+    }
+    .PreTitle strong{
+        color: var(--suportColor);
+    }
+    
+    .areaAtuacaoDescription h2{
+        text-align: center;
+        font-weight: normal;
+        font-size: 7vw;
+        width: 100%;
+    }
+    
+    .areaAtuacaoDescription h2 strong{
+        color: var(--suportColor);
+    }
+
+    .descriptionSecond{
+        font-size: 22px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        width: 70%;
+        text-align: center;
+    }
+    
+    .cardArea{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    
+    .CardService{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        flex-direction: column;
+        text-align: center;
+        justify-content: flex-start;
+        margin-top: 22px;
+    }
+    
+    .Mardown{
+        color: var(--suportColor);
+        font-size: 32px;
+    }
+    
+    .ServiceLine{
+        font-size: 22px;
+        margin-left: 10px;
+        font-weight: bold;
+        margin-bottom: -10px;
+    }
 }

@@ -87,13 +87,29 @@ export default function ContentPostagem({ params }: { params: { slug: string } }
   return (
     <>
       {loading ? <Loading /> :
-      <><Navbar /><Banner title='' id='' TopicoCard={data?.blog?.data?.attributes?.TopicoCard} publishedAt={data?.blog?.data?.attributes?.publishedAt} TituloPrincipal={data?.blog?.data?.attributes?.TituloPrincipal} TempoLeitura={data?.blog?.data?.attributes?.TempoLeitura} bannerURL={data?.blog?.data?.attributes?.ImagemBanner?.data?.attributes?.url} /><ContentPost
+      <>
+        <Navbar />
+        <Banner title='' id='' TopicoCard={data?.blog?.data?.attributes?.TopicoCard} publishedAt={data?.blog?.data?.attributes?.publishedAt} TituloPrincipal={data?.blog?.data?.attributes?.TituloPrincipal} TempoLeitura={data?.blog?.data?.attributes?.TempoLeitura} bannerURL={data?.blog?.data?.attributes?.ImagemBanner?.data?.attributes?.url} />
+        
+        <ContentPost
           escritoPor={data?.blog?.data?.attributes?.EscritoPor}
           MidiaSocialEscritorLink={data?.blog?.data?.attributes?.MidiaSocialEscritorLink}
           siglaEscrito={data?.blog?.data?.attributes?.SiglaLocalEscritor}
           localEscrito={data?.blog?.data?.attributes?.LocalEscritor}
           fonte={data?.blog?.data?.attributes?.Fonte}
-          BlogPost={data?.blog?.data?.attributes?.BlogPost} dataPost='' TituloPreConteudo={data?.blog?.data?.attributes?.TituloPreConteudo} /><CreditBanner description={data?.blog?.data?.attributes?.DescricaoAdvogado} title={data?.blog?.data?.attributes?.AdvogadoResponsavel} url={data?.blog?.data?.attributes?.FotoAdvogado?.data?.attributes?.url} social={data?.socialMidia?.data?.attributes?.Whatsapp} /><br /><NoticiasLast /><Convert /><Footer /></>
+          BlogPost={data?.blog?.data?.attributes?.BlogPost} dataPost='' TituloPreConteudo={data?.blog?.data?.attributes?.TituloPreConteudo} />
+          <br />
+          <br />
+          <br />
+          <br />
+          <CreditBanner description={data?.blog?.data?.attributes?.DescricaoAdvogado} title={data?.blog?.data?.attributes?.AdvogadoResponsavel} url={data?.blog?.data?.attributes?.FotoAdvogado?.data?.attributes?.url} social={data?.socialMidia?.data?.attributes?.Whatsapp} />
+          <br />
+          <br />
+          <br />
+          <NoticiasLast />
+          <Convert />
+          <Footer />
+          </>
       }
     </>
   )

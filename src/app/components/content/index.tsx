@@ -79,9 +79,11 @@ export default function ContentPost ({
                 </a>
                 <p className={styles.Location}>{localEscrito}<span>/</span>{siglaEscrito}</p>
               </div>
-              <button className={styles.ButtonModalConvert}>
-                <p>Tire suas dúvidas !</p>
-              </button>
+              <Link href="/Contato">
+                <button className={styles.ButtonModalConvert}>
+                  <p>Tire suas dúvidas !</p>
+                </button>
+              </Link>
               <br />
               <br />
               <br />

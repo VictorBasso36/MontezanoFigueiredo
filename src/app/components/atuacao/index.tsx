@@ -25,18 +25,26 @@ export default function AtuacaoAreas() {
   `;
 
   const { loading, error, data } = useQuery(GET_ATUACOES);
-
+  if (loading) return  (
+    <>
+      <div style={
+        {
+          width: '100%',
+          zIndex: 2,
+          height: '100vh',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
+        }
+      }>
+        <Loading />
+      </div>
+      
+    </>
+  )
   if (error) return null;
 
   return (
-    loading 
-    ?
-    <section className={styles.MainSection}>
-      <div className={styles.ContainerArea}>
-        <Loading />
-      </div>
-    </section>
-    :
     <section className={styles.MainSection}>
         <div className={styles.ContainerArea}>
             <div className={styles.MainTitleHere}>
@@ -47,7 +55,7 @@ export default function AtuacaoAreas() {
         <div className={styles.CardHere} id="Servicos">
             {/* <CardAtuacao /> */}
             {data?.atuacaos?.data?.map((atuacao: any, index: React.Key | null | undefined) => (
-                <CardServico title={atuacao?.attributes?.TituloCard} description={atuacao?.attributes?.DescricaoPrincipal} id={'/Areas-de-Atuacao/Servico/' + atuacao?.id} key={index} />
+                <CardServico title={atuacao?.attributes?.TituloCard} description={atuacao?.attributes?.DescricaoCard} id={'/Areas-de-Atuacao/Servico/' + atuacao?.id} key={index} />
             ))}
         </div>
     </section>

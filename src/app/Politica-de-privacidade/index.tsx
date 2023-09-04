@@ -1,7 +1,8 @@
+"use client"
 import { Footer } from "antd/es/layout/layout"
 import React from "react"
 import Convert from "../components/convertClient/convert"
-"use client"
+
 export default function PoliticaDePrivacidade() {
 
 return (

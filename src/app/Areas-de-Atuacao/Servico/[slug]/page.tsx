@@ -5,6 +5,7 @@ import { gql, useQuery } from '@apollo/client';
 import Navbar from "@/app/components/navbar/navbar";
 import Footer from "@/app/components/footer/footer";
 import Convert from "@/app/components/convertClient/convert";
+import Image from "next/image";
 import AtuacaoAreas from "@/app/components/atuacao";
 import Banner from "@/app/components/mainBanner/banner";
 import CreditBanner from "@/app/components/creditBannner";
@@ -37,6 +38,10 @@ export default function ServicoPage({ params }: { params: { slug: string } }) {
         PreTitulo
         DescricaoCard
         DescricaoPrincipal
+        ListaServicos {
+          id
+          Servico
+        }
       }
     }
   }
@@ -57,7 +62,8 @@ if (loading) return  (
     <div style={
       {
         width: '100%',
-        height: '100%',
+        zIndex: 2,
+        height: '100vh',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center'
@@ -88,8 +94,7 @@ if (error) return null;
         <div className={styles.mainTitleContainer}>
           <CardAtuacao linkWhatsApp={data?.socialMidia?.data?.attributes?.Whatsapp} />
           <div className={styles.textArea}>
-            <p className={styles.pretitle}><strong>-</strong>tex example for pre title<strong>-</strong></p>
-             {data?.atuacaos?.data[0]?.attributes?.PreTitulo ? <p><strong>-</strong>{data?.atuacaos?.data[0]?.attributes?.PreTitulo}<strong>-</strong></p> : null}
+             {data?.atuacaos?.data[0]?.attributes?.PreTitulo ? <p className={styles.pretitle}><strong>-</strong>{data?.atuacaos?.data[0]?.attributes?.PreTitulo}<strong>-</strong></p> : null}
             <h1>{data?.atuacaos?.data[0]?.attributes?.TituloPrincipal}</h1>
             <p className={styles.Description}>{data?.atuacaos?.data[0]?.attributes?.DescricaoPrincipal}</p>
           </div>
@@ -102,7 +107,18 @@ if (error) return null;
       <br />
       <br />
       <div className={styles.areaAtuacaoDescription}>
-        <h2></h2>
+        <div className={styles.areaAtuacaoDescriptionContainer}>
+          <p className={styles.PreTitle}><strong>-</strong>Mais Sobre<strong>-</strong></p>
+          <h2><span>A FRENTE DO MERCADO</span><br /> A GENTE TE MOSTRA <strong>O MELHOR CAMINHO</strong></h2>
+          <p className={styles.descriptionSecond}>De maneira criteriosa e detalhada, o trabalho de consultoria empresarial é um conjunto de ações que visa a reestruturação do seu negócio, todas com impacto efetivo na melhora nos resultados.</p>
+          <div className={styles.cardArea}>
+            {data?.atuacaos?.data[0]?.attributes?.ListaServicos.map((data: any, index: any) => (
+                <div className={styles.CardService} key={index}>
+                   <Image src={'/simbolo-marrom.svg'} width={45} height={45} alt={''}></Image> <p className={styles.ServiceLine}>{''}{data?.Servico}</p>
+                </div>
+           ))}
+          </div>
+        </div>
       </div>
       <br />
       <br />

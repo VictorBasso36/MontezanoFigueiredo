@@ -82,9 +82,9 @@ const pathname = usePathname();
                 <button className={styles.ButtonConvert}>+ Conteúdos</button>
               </Link>
               :
-             
-              <button className={styles.ButtonConvert}>+ Contato</button>
-        
+              <Link href={'/Contato'}>
+                <button className={styles.ButtonConvert}>+ Contato</button>
+              </Link>
               }
             </div>
             <div className={styles.CardList} style={{ minHeight: data?.blogs?.data?.length > 1 ? 430 : 0 }}>
