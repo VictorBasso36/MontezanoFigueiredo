@@ -25,7 +25,6 @@ export default function Banner({
   TempoLeitura,
   bannerURL
 }:Props) {
-  console.log("eaea",bannerURL)
   const pathname = usePathname();
   const query = gql`
   query BannersFoto {
@@ -86,7 +85,7 @@ export default function Banner({
   }`
 
   const { data } = useQuery(query);
-  console.log(data)
+
 
   return (
     <div className={styles.banner} >

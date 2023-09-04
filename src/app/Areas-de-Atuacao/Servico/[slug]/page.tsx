@@ -12,6 +12,7 @@ import styles from "./index.module.css"
 import CardConvercao from "@/app/components/cards/cardConvercao/cardConvercao";
 import CardAtuacao from "@/app/components/cards/cardAtuacao/caardAtuacao";
 import Confiaca from "@/app/components/confiancaResultados";
+import Loading from "@/app/components/loading";
 
 export default function ServicoPage({ params }: { params: { slug: string } }) {
   const GET_ATUACOES = gql`
@@ -51,10 +52,25 @@ export default function ServicoPage({ params }: { params: { slug: string } }) {
 
 const { loading, error, data } = useQuery(GET_ATUACOES);
 
-if (loading) return <p>Cargando...</p>;
+if (loading) return  (
+  <>
+    <div style={
+      {
+        width: '100%',
+        height: '100%',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center'
+      }
+    }>
+      <Loading />
+    </div>
+    
+  </>
+)
+
 if (error) return null;
 
-console.log("@@@@", data)
     return (
       <>
       <Navbar/>

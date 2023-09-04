@@ -17,7 +17,7 @@ export const metadata: Metadata = {
     width: 'device-width'
   },
   icons: {
-    icon: './public/next.svg',
+    icon: '/next.svg',
   },
 }
 

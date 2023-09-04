@@ -29,12 +29,11 @@ export default function SocialMidiaIcon({transformScale}:ScalableComponentProps)
   }`
   const { loading, error, data } = useQuery(dataQuery);
   if (error) return null;
-  console.log(data)
   return (
     loading ?
     <Loading />
     :
-    
+
     <div className={styles.divSocialMidia} style={{ transform: `scale(${transformScale})` }}>
         <a href={data?.socialMidia?.data?.attributes?.Facebook}>
             <Image src='/fbicon.svg' width={25} height={25} alt={'Facebook Montezano Figueiredo'}></Image>

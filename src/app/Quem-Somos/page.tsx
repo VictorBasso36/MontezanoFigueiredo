@@ -38,7 +38,7 @@ export default function QuemSomos() {
     }
   }`
   const { data } = useQuery(query);
-  console.log(data);
+
 
   const equipeBanners = data?.equipes?.data.map((equipe: any, index: any) => (
     <CreditEquipeBanner key={index} social={equipe?.attributes?.MidiaSocial} description={equipe?.attributes?.Descricao} title={equipe?.attributes?.Nome} url={equipe?.attributes?.Foto?.data?.attributes?.url} />
