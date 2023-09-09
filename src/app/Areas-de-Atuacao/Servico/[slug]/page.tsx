@@ -85,12 +85,12 @@ if (error) return null;
       <br />
       <br />
       <br />
-      <br />
-      <br />
-      <br />
-      <br />
-      <br />
+
       <div className={styles.mainTitle}>
+        <br />
+        <br />
+        <br />
+        <br />
         <div className={styles.mainTitleContainer}>
           <CardAtuacao linkWhatsApp={data?.socialMidia?.data?.attributes?.Whatsapp} />
           <div className={styles.textArea}>
@@ -99,6 +99,10 @@ if (error) return null;
             <p className={styles.Description}>{data?.atuacaos?.data[0]?.attributes?.DescricaoPrincipal}</p>
           </div>
         </div>
+        <br />
+        <br />
+        <br />
+        <br />
       </div>
       <br />
       <br />
@@ -114,7 +118,7 @@ if (error) return null;
           <div className={styles.cardArea}>
             {data?.atuacaos?.data[0]?.attributes?.ListaServicos.map((data: any, index: any) => (
                 <div className={styles.CardService} key={index}>
-                   <Image src={'/simbolo-marrom.svg'} width={45} height={45} alt={''}></Image> <p className={styles.ServiceLine}>{''}{data?.Servico}</p>
+                   <p className={styles.ServiceLine}><strong>-</strong> {data?.Servico}</p>
                 </div>
            ))}
           </div>

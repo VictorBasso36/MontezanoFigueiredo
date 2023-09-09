@@ -46,7 +46,7 @@ export default function Navbar() {
             backgroundColor: pathname.includes('/Areas-de-Atuacao/Servico/') ? 'var(--mainColor)' : '',
             position: pathname.includes('/Areas-de-Atuacao/Servico/') ? 'fixed' : undefined,
             marginTop: pathname.includes('/Areas-de-Atuacao/Servico/') ? '0px' : '',
-            boxShadow: pathname.includes('/Areas-de-Atuacao/Servico/') ? 'rgba(100, 100, 111, 0.2) 0px 7px 29px 0px' : '',
+            boxShadow: pathname.includes('/Areas-de-Atuacao/Servico/') ? 'black 0px 7px 29px 0px' : '',
         }}>
 
 

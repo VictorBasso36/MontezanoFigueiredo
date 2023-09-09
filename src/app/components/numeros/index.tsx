@@ -16,7 +16,7 @@ export default function Numeros() {
         <h2 className={styles.MainTitlemuber}>NOSSOS <strong>NÚMEROS</strong></h2>
        <div className={styles.numbersHere}>
           <div className={styles.NumebrCard}>
-            <h2><span>+</span>15min</h2>
+            <h2><span>+</span>15mi</h2>
             <p>De créditos tributários recuperados.</p>
           </div>
           <div className={styles.NumebrCard}>
