@@ -14,6 +14,7 @@ export default function CardAtuacao({linkWhatsApp}:props) {
           <div className={styles.DescriptionCard}>
             <h2>Saiba mais sobre esse serviço com nossos especialistas.</h2>
           </div>
+          <br />
           <a href={linkWhatsApp} target="_blank">
             <button>
               Fale conosco
