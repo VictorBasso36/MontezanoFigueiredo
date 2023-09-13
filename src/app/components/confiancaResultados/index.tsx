@@ -95,8 +95,8 @@ export default function Confiaca() {
             <Swiper
               spaceBetween={10}
               slidesPerView={slidesPerView}
-              centeredSlides={true}
-              loop={true}
+              centeredSlides={false}
+              loop={false}
               grabCursor={true}
               modules={[Autoplay, Virtual]}
               autoplay={{

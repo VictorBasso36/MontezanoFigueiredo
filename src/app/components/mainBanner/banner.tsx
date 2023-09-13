@@ -176,7 +176,7 @@ export default function Banner({
         <>  
           <div className={styles.BannerContent} style={{zIndex: 2, display: 'flex', alignItems: 'center', justifyContent: 'center', flexDirection: 'column', width: '90%'}}>
             <div className={styles.Content}>
-                <p className={styles.preTitle}><strong>-</strong>Fique a frente de todas as notícias que impactam seu negócio<strong>-</strong></p>
+                <p className={`${styles.preTitle} ${styles.preTitleConteudo}`}><strong>-</strong>Fique a frente de todas as notícias que impactam seu negócio<strong>-</strong></p>
                 <h1>PORTAL DE <strong>CONTEÚDO</strong></h1>
                 
             </div>  
