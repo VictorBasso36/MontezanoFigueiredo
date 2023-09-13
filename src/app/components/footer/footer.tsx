@@ -16,6 +16,15 @@ export default function Footer() {
           }
         }
       }
+      socialMidia {
+        data {
+          attributes {
+            Telefone
+            TextoEndereco
+            LinkEndereco
+          }
+        }
+      }
     }
   `;
 
@@ -42,8 +51,8 @@ export default function Footer() {
           <div className={styles.contentBlock}>
               <h6>CONTATO</h6>
               <ul>
-                <li><a href="">+55 (11) 4314-1360</a></li>
-                <li><a href="https://www.google.com.br/maps/place/Montezano+Figueiredo/@-23.5891086,-46.6782698,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce57db97d4eced:0x66c11f49724e760e!8m2!3d-23.5891135!4d-46.6756949!16s%2Fg%2F11thwdy9b6?entry=ttu">Rua Dr. Eduardo de Souza Aranha, 387 15º andar CJ 152 - Itaim Bibi - São Paulo.</a></li>
+                <li><a href={`tel:${data?.socialMidia?.data?.attributes?.Telefone}`}>{data?.socialMidia?.data?.attributes?.Telefone}</a></li>
+                <li><a href={data?.socialMidia?.data?.attributes?.LinkEndereco}>{data?.socialMidia?.data?.attributes?.TextoEndereco}</a></li>
               </ul>
           </div>
           <div className={styles.contentBlock}>
