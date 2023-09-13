@@ -32,6 +32,9 @@
 .Container button:hover{
     background-color: var(--mainColor);
 }
+.DescriptionCard{
+    height: 60px;
+}
 
 .DescriptionCard h2{
     
