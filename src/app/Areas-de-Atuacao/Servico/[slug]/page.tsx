@@ -113,7 +113,7 @@ if (error) return null;
       <div className={styles.areaAtuacaoDescription}>
         <div className={styles.areaAtuacaoDescriptionContainer}>
           <p className={styles.PreTitle}><strong>-</strong>Mais Sobre<strong>-</strong></p>
-          <h2><span>A FRENTE DO MERCADO</span><br /> A GENTE TE MOSTRA <strong>O MELHOR CAMINHO</strong></h2>
+          <h2> A GENTE TE MOSTRA <strong>O MELHOR CAMINHO</strong></h2>
           <p className={styles.descriptionSecond}>De maneira criteriosa e detalhada, o trabalho de consultoria empresarial é um conjunto de ações que visa a reestruturação do seu negócio, todas com impacto efetivo na melhora nos resultados.</p>
           <div className={styles.cardArea}>
             {data?.atuacaos?.data[0]?.attributes?.ListaServicos.map((data: any, index: any) => (
