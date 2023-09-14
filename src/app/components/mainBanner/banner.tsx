@@ -94,7 +94,7 @@ export default function Banner({
         <> 
           <div className={styles.bannerHome} style={{zIndex: 2}}>
             <div className={styles.ContentMainBanner}>
-                <p><strong>-</strong>Excelência em Gestão Tributária e Planejamento Estratégico<strong>-</strong></p>
+                <p style={{marginBottom: '10px'}}><strong>-</strong>Excelência em Gestão Tributária e Planejamento Estratégico<strong>-</strong></p>
                 <h1>MONTEZANO <strong>FIGUEIREDO</strong></h1>
             </div>        
             <div className={styles.buttonArea} style={{zIndex: 2}}>

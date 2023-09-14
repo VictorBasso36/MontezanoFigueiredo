@@ -29,7 +29,7 @@ export default function CreditBanner( {title, description, url, social}:PropsOfC
                 </p>
                 <a href={social}>
                     <button>
-                        Tire suas duvidas !
+                        Tire suas dúvidas !
                     </button>
                 </a>
             </div>
