@@ -7,10 +7,12 @@ import Footer from '../components/footer/footer'
 import Localize from '../components/localize/localize'
 import ModalConvert from '../components/modalConvert'
 import ModalConvertComponent from '../components/modalConvertComponent'
+import Whatsapp from '../components/socialMidia'
 
 export default function Contato() {
   return (
     <>
+    <Whatsapp transformScale={1} />
     <Navbar/>
     <main className={styles.main}>
       <Banner TempoLeitura={1} TituloPrincipal='' TopicoCard='' bannerURL='' publishedAt='' id='' title=''/>

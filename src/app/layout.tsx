@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Josefin_Sans } from 'next/font/google'
 import GraphQLProvider from './lib/provider'
 import { ConfigProvider } from 'antd'
+import Image from 'next/image'
 const josefin_Sans = Josefin_Sans({ 
   subsets: ['latin'],
   weight: ['100','200','300','400','500','600','700'],
@@ -26,6 +27,7 @@ export default function RootLayout({
  }: {
   children: React.ReactNode;
  }) {
+  
   return (
    <html lang="pt-Br">
     <link rel="icon" href="/next.svg" sizes="any" />

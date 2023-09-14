@@ -11,6 +11,7 @@ import { gql, useQuery } from '@apollo/client';
 import ContentPost from '@/app/components/content';
 import CreditBanner from '@/app/components/creditBannner';
 import Loading from '@/app/components/loading';
+import Whatsapp from '@/app/components/socialMidia';
 
 export default function ContentPostagem({ params }: { params: { slug: string } }) {
   const GET_POST = gql`
@@ -88,6 +89,7 @@ export default function ContentPostagem({ params }: { params: { slug: string } }
     <>
       {loading ? <Loading /> :
       <>
+        <Whatsapp transformScale={1} />
         <Navbar />
         <Banner title='' id='' TopicoCard={data?.blog?.data?.attributes?.TopicoCard} publishedAt={data?.blog?.data?.attributes?.publishedAt} TituloPrincipal={data?.blog?.data?.attributes?.TituloPrincipal} TempoLeitura={data?.blog?.data?.attributes?.TempoLeitura} bannerURL={data?.blog?.data?.attributes?.ImagemBanner?.data?.attributes?.url} />
         

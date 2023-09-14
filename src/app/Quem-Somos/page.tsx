@@ -13,6 +13,7 @@ import CreditEquipeBanner from '../components/cards/equipeCard'
 import Numeros from '../components/numeros'
 import Confiaca from '../components/confiancaResultados'
 import ButtonSupport from '../components/buttons/buttonSuport'
+import Whatsapp from '../components/socialMidia'
 
 export default function QuemSomos() {
   const query = gql`
@@ -57,6 +58,7 @@ export default function QuemSomos() {
   
   return (
     <>
+    <Whatsapp transformScale={1} />
     <Navbar/>
     <main className={styles.main}>
       <Banner TempoLeitura={0} TituloPrincipal='' TopicoCard='' bannerURL='' publishedAt='' id='' title=''/>

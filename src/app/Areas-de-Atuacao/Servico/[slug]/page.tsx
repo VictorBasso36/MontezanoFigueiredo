@@ -14,6 +14,7 @@ import CardConvercao from "@/app/components/cards/cardConvercao/cardConvercao";
 import CardAtuacao from "@/app/components/cards/cardAtuacao/caardAtuacao";
 import Confiaca from "@/app/components/confiancaResultados";
 import Loading from "@/app/components/loading";
+import Whatsapp from "@/app/components/socialMidia";
 
 export default function ServicoPage({ params }: { params: { slug: string } }) {
   const GET_ATUACOES = gql`
@@ -79,6 +80,7 @@ if (error) return null;
 
     return (
       <>
+      <Whatsapp transformScale={1} />
       <Navbar/>
       <br />
       <br />

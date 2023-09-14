@@ -8,6 +8,7 @@ import { gql, useQuery } from '@apollo/client';
 import React, { useEffect, useState } from 'react';
 import { Divider, Pagination } from 'antd';
 import { usePathname } from 'next/navigation';
+import Whatsapp from '../socialMidia';
 
 export default function NoticiasLast() {
 const pathname = usePathname();
