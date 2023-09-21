@@ -17,46 +17,41 @@ import Loading from "@/app/components/loading";
 import Whatsapp from "@/app/components/socialMidia";
 
 export default function ServicoPage({ params }: { params: { slug: string } }) {
-  const GET_ATUACOES = gql`
-  query Attributes {
-  atuacaos {
-    data {
-      id
-      attributes {
-        AdvogadoResponsavel
-        DescricaoAdvogado
-        DescricaoPrincipal
-        DescricaoServico
-        FotoAdvogado {
-          data {
-            attributes {
-              url
+  const GET_ATUACAO = gql`
+    query Atuacao($atuacaoId: ID) {
+      atuacao(id: $atuacaoId) {
+        data {
+          id
+          attributes {
+            AdvogadoResponsavel
+            DescricaoAdvogado
+            DescricaoPrincipal
+            DescricaoServico
+            FotoAdvogado {
+              data {
+                attributes {
+                  url
+                }
+              }
+            }
+            TituloPrincipal
+            TituloCard
+            PreTitulo
+            DescricaoCard
+            DescricaoPrincipal
+            ListaServicos {
+              id
+              Servico
             }
           }
         }
-        TituloPrincipal
-        TituloCard
-        PreTitulo
-        DescricaoCard
-        DescricaoPrincipal
-        ListaServicos {
-          id
-          Servico
-        }
       }
     }
-  }
-  socialMidia {
-    data {
-      attributes {
-        Whatsapp
-      }
-    }
-  }
-}
-`;
+  `;
 
-const { loading, error, data } = useQuery(GET_ATUACOES);
+  const { loading, error, data } = useQuery(GET_ATUACAO, {
+    variables: { atuacaoId: params.slug },
+  });
 
 if (loading) return  (
   <>
@@ -77,7 +72,7 @@ if (loading) return  (
 )
 
 if (error) return null;
-
+console.log(data)
     return (
       <>
       <Whatsapp transformScale={1} />
@@ -96,9 +91,9 @@ if (error) return null;
         <div className={styles.mainTitleContainer}>
           <CardAtuacao linkWhatsApp={data?.socialMidia?.data?.attributes?.Whatsapp} />
           <div className={styles.textArea}>
-             {data?.atuacaos?.data[0]?.attributes?.PreTitulo ? <p className={styles.pretitle}><strong>-</strong>{data?.atuacaos?.data[0]?.attributes?.PreTitulo}<strong>-</strong></p> : null}
-            <h1>{data?.atuacaos?.data[0]?.attributes?.TituloPrincipal}</h1>
-            <p className={styles.Description}>{data?.atuacaos?.data[0]?.attributes?.DescricaoPrincipal}</p>
+             {data?.atuacao?.data?.attributes?.PreTitulo ? <p className={styles.pretitle}><strong>-</strong>{data?.atuacao?.data?.attributes?.PreTitulo}<strong>-</strong></p> : null}
+            <h1>{data?.atuacao?.data?.attributes?.TituloPrincipal}</h1>
+            <p className={styles.Description}>{data?.atuacao?.data?.attributes?.DescricaoPrincipal}</p>
           </div>
         </div>
         <br />
@@ -116,9 +111,10 @@ if (error) return null;
         <div className={styles.areaAtuacaoDescriptionContainer}>
           <p className={styles.PreTitle}><strong>-</strong>Mais Sobre<strong>-</strong></p>
           <h2> A GENTE TE MOSTRA <strong>O MELHOR CAMINHO</strong></h2>
-          <p className={styles.descriptionSecond}>De maneira criteriosa e detalhada, o trabalho de consultoria empresarial é um conjunto de ações que visa a reestruturação do seu negócio, todas com impacto efetivo na melhora nos resultados.</p>
+          <p className={styles.descriptionSecond}>{data?.atuacao?.data?.attributes?.DescricaoServico}
+</p>
           <div className={styles.cardArea}>
-            {data?.atuacaos?.data[0]?.attributes?.ListaServicos.map((data: any, index: any) => (
+            {data?.atuacao?.data?.attributes?.ListaServicos.map((data: any, index: any) => (
                 <div className={styles.CardService} key={index}>
                    <p className={styles.ServiceLine}><strong>-</strong> {data?.Servico}</p>
                 </div>
@@ -132,9 +128,8 @@ if (error) return null;
       <br />
       <br />
       <br />
-      {data?.atuacaos?.data?.attributes?.DescricaoAdvogado}
-      <CreditBanner social="/Contato" description={data?.atuacaos?.data[0]?.attributes?.DescricaoAdvogado} 
-      title={data?.atuacaos?.data[0]?.attributes?.AdvogadoResponsavel} url={data?.atuacaos?.data[0]?.attributes?.FotoAdvogado?.data?.attributes?.url}/>
+      <CreditBanner social="/Contato" description={data?.atuacao?.data?.attributes?.DescricaoAdvogado} 
+      title={data?.atuacao?.date?.attributes?.AdvogadoResponsavel} url={data?.atuacao?.data?.attributes?.FotoAdvogado?.data?.attributes?.url}/>
       <Confiaca />
       <AtuacaoAreas/>
       <Convert/>
